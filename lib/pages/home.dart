@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Padding(
-          padding: EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 0.0),
+          padding: EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 10.0),
           child: Text(
             'Hello, Ninad!',
             style: TextStyle(
