@@ -14,16 +14,7 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          // title: const Padding(
-          //   padding: EdgeInsets.fromLTRB(10.0, 10.0, 55.0, 10.0),
-          //   child: Text('Add Location', style: TextStyle(fontSize: 28,
-          //       fontFamily: 'Poppins',
-          //       fontWeight: FontWeight.w500,
-          //       color: Colors.green),),
-          //
-          // ),
-        ),
+        appBar: AppBar(),
         body:
         //const Padding(
         //   padding: EdgeInsets.all(30.0),
@@ -243,9 +234,9 @@ class Register extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(right: 10.0),
                                     child: Image.asset(
-                                      'assets/images/google.png', // Replace with your Google logo asset
-                                      width: 30, // Adjust the width as needed
-                                      height: 30, // Adjust the height as needed
+                                      'assets/images/google.png',
+                                      width: 30,
+                                      height: 30,
                                     ),
                                   ),
                                   Text(
@@ -261,10 +252,6 @@ class Register extends StatelessWidget {
                             ),
                           ),
                         ),
-
-
-
-
 
 
                       ],

@@ -14,16 +14,7 @@ class Addlocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          // title: const Padding(
-          //   padding: EdgeInsets.fromLTRB(10.0, 10.0, 55.0, 10.0),
-          //   child: Text('Add Location', style: TextStyle(fontSize: 28,
-          //       fontFamily: 'Poppins',
-          //       fontWeight: FontWeight.w500,
-          //       color: Colors.green),),
-          //
-          // ),
-        ),
+        appBar: AppBar(),
         body:
         //const Padding(
         //   padding: EdgeInsets.all(30.0),
@@ -68,8 +59,6 @@ class Addlocation extends StatelessWidget {
 
                           ],
                         ),
-
-
 
                         // Container(height: 30,),
                         Padding(
