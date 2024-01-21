@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/settings.dart';
-import 'package:sustain_x/pages/Sample1.dart';
+import 'package:sustain_x/pages/calculate_cost.dart';
 import 'home.dart';
+//import 'settings.dart';
 
 class SchedulePickup extends StatefulWidget {
   const SchedulePickup({Key? key, required this.index}) : super(key: key);
