@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/settings.dart';
 import 'package:sustain_x/pages/schedulepickup.dart';
+import 'package:sustain_x/pages/price_enquiry.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key, required this.index}) : super(key: key);
@@ -114,7 +115,15 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Price_Enquiry(
+                                            index: 1,
+                                          )),
+                                );
+                              },
                               child: Text(
                                 'Price Enquiry',
                                 textAlign: TextAlign.center,
