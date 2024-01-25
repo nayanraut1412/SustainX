@@ -11,80 +11,55 @@ class Price_Enquiry extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          //   title: const Padding(
-          //     padding: EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 10.0),
-          //     child: Text(
-          //       'Hello, Ninad!',
-          //       style: TextStyle(
-          //         fontSize: 28,
-          //         fontFamily: 'Poppins',
-          //         fontWeight: FontWeight.w400,
-          //       ),
-          //     ),
-          ),
-      // ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 5.0),
-              child: Text(
-                'Price Enquiry',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 28.0,
-                ),
-              ),
-            ),
-            Row(
+      appBar: AppBar(),
+      body: Container(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 5.0),
+                  child: Text(
+                    'Price Enquiry',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 28.0,
+                    ),
+                  ),
+                ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(10.0, 50.0, 20.0, 20.0),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 0.0),
                   child: Container(
-                    width: 150.0,
-                    height: 250.0,
+                    width: 350,
+                    height: 170,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(17.0),
-                      border: Border.all(color: Colors.black),
+                      color: Colors.grey[400],
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(
-                          flex: 2,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
-                            child: Image.asset('assets/images/truck.png'),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 5.0),
+                          child: Text(
+                            ' Note:',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18.0,
+                            ),
                           ),
                         ),
-                        Expanded(
-                          flex: 1,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: OutlinedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SchedulePickup(
-                                            index: 1,
-                                          )),
-                                );
-                              },
-                              child: Text(
-                                'Schedule a Free Pickup',
-                                textAlign: TextAlign.center,
-                              ),
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: Colors.green),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(17.0),
-                                ),
-                              ),
-                            ),
+                        const Padding(
+                          padding: EdgeInsets.all(0.0),
+                          child: Text(
+                            '    • The prices may vary with fluctuation in \n       scrap market. '
+                            '\n     • Prices may be different for bulk pickups.  \n       Call at +91-756XXXXXX to get a quote for \n       bulk pickups. ',
+                            style: TextStyle(fontSize: 16.0),
                           ),
                         ),
                       ],
@@ -92,203 +67,614 @@ class Price_Enquiry extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 20.0),
-                  child: Container(
-                    width: 150.0,
-                    height: 250.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(17.0),
-                      border: Border.all(color: Colors.black),
+                  padding:
+                      EdgeInsets.symmetric(vertical: 15.0, horizontal: 70.0),
+                  child: Text(
+                    'Normal Recyclables',
+                    style: TextStyle(
+                      color: Colors.grey[600],
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20.0,
                     ),
-                    child: Column(
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
-                            child: Image.asset('assets/images/rupee.png'),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: OutlinedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => SchedulePickup(
-                                            index: 1,
-                                          )),
-                                );
-                              },
-                              //},
-                              child: Text(
-                                'Price Enquiry',
-                                textAlign: TextAlign.center,
+                  ),
+                ),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.fromLTRB(5.0, 0.0, 25.0, 0.0),
+                            child: Container(
+                              width: 155.0,
+                              height: 120.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(17.0),
+                                border: Border.all(color: Colors.black),
                               ),
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: Colors.green),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(17.0),
-                                ),
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    flex: 4,
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 4.0, horizontal: 20.0),
+                                      child: Image.asset(
+                                          'assets/price_enquiry/newspaper.png'),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Rs. 15/KG',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 15.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+                            child: Container(
+                              width: 155.0,
+                              height: 120.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(17.0),
+                                border: Border.all(color: Colors.black),
+                              ),
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    flex: 4,
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 4.0, horizontal: 20.0),
+                                      child: Image.asset(
+                                          'assets/price_enquiry/office_paper.png'),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Rs. 15/KG',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 15.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 37.0),
+                            child: Text(
+                              'Newspapers',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 48.0),
+                            child: Text(
+                              'Office Papers',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      //2
+                      Padding(
+                        padding:
+                            const EdgeInsets.fromLTRB(0.0, 010.0, 0.0, 0.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                  5.0, 0.0, 25.0, 0.0),
+                              child: Container(
+                                width: 155.0,
+                                height: 120.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(17.0),
+                                  border: Border.all(color: Colors.black),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      flex: 4,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4.0, horizontal: 20.0),
+                                        child: Image.asset(
+                                            'assets/price_enquiry/books.png'),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Rs. 12/KG',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 15.0,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                  0.0, 0.0, 10.0, 0.0),
+                              child: Container(
+                                width: 155.0,
+                                height: 120.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(17.0),
+                                  border: Border.all(color: Colors.black),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      flex: 4,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4.0, horizontal: 20.0),
+                                        child: Image.asset(
+                                            'assets/price_enquiry/cardboard.png'),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Rs. 15/KG',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 15.0,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 60.0),
+                            child: Text(
+                              'Books',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 58.0),
+                            child: Text(
+                              'Cardboard',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      //3
+                      Padding(
+                        padding:
+                            const EdgeInsets.fromLTRB(0.0, 010.0, 0.0, 0.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                  5.0, 0.0, 25.0, 0.0),
+                              child: Container(
+                                width: 155.0,
+                                height: 120.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(17.0),
+                                  border: Border.all(color: Colors.black),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      flex: 4,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4.0, horizontal: 20.0),
+                                        child: Image.asset(
+                                            'assets/price_enquiry/plastic.png'),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Rs. 12/KG',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 15.0,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                  0.0, 0.0, 10.0, 0.0),
+                              child: Container(
+                                width: 155.0,
+                                height: 120.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(17.0),
+                                  border: Border.all(color: Colors.black),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      flex: 4,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4.0, horizontal: 20.0),
+                                        child: Image.asset(
+                                            'assets/price_enquiry/steel.png'),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Rs. 37/KG',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 15.0,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 60.0),
+                            child: Text(
+                              'Plastic',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 71.0),
+                            child: Text(
+                              'Steel',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      //4
+                      Padding(
+                        padding:
+                            const EdgeInsets.fromLTRB(0.0, 010.0, 0.0, 0.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                  5.0, 0.0, 25.0, 0.0),
+                              child: Container(
+                                width: 155.0,
+                                height: 120.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(17.0),
+                                  border: Border.all(color: Colors.black),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      flex: 4,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4.0, horizontal: 20.0),
+                                        child: Image.asset(
+                                            'assets/price_enquiry/aluminum.png'),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Rs. 105/KG',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 15.0,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                                  0.0, 0.0, 10.0, 0.0),
+                              child: Container(
+                                width: 155.0,
+                                height: 120.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(17.0),
+                                  border: Border.all(color: Colors.black),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      flex: 4,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 4.0, horizontal: 20.0),
+                                        child: Image.asset(
+                                            'assets/price_enquiry/copper.png'),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      flex: 2,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          'Rs. 425/KG',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w700,
+                                            fontSize: 15.0,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 44.7),
+                            child: Text(
+                              'Aluminium',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 69.0),
+                            child: Text(
+                              'Copper',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      //5
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            vertical: 15.0, horizontal: 70.0),
+                        child: Text(
+                          'Small Appliances',
+                          style: TextStyle(
+                            color: Colors.grey[600],
+                            fontWeight: FontWeight.w700,
+                            fontSize: 20.0,
+                          ),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.fromLTRB(5.0, 0.0, 25.0, 0.0),
+                            child: Container(
+                              width: 155.0,
+                              height: 120.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(17.0),
+                                border: Border.all(color: Colors.black),
+                              ),
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    flex: 4,
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 4.0, horizontal: 20.0),
+                                      child: Image.asset(
+                                          'assets/price_enquiry/eco-battery.png'),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Rs. 105/KG',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 15.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
+                            child: Container(
+                              width: 155.0,
+                              height: 120.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(17.0),
+                                border: Border.all(color: Colors.black),
+                              ),
+                              child: Column(
+                                children: [
+                                  Expanded(
+                                    flex: 4,
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 4.0, horizontal: 20.0),
+                                      child: Image.asset(
+                                          'assets/price_enquiry/television.png'),
+                                    ),
+                                  ),
+                                  Expanded(
+                                    flex: 2,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Rs. 150/PIECE',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w700,
+                                          fontSize: 15.0,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 38.3),
+                            child: Text(
+                              'Used Battery',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 68.0),
+                            child: Text(
+                              'CRT TV',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ],
             ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 20.0, 0.0),
-                  child: Container(
-                    width: 150.0,
-                    height: 250.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(17.0),
-                      border: Border.all(color: Colors.black),
-                    ),
-                    child: Column(
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
-                            child: Image.asset('assets/images/calculate.png'),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Price Your Trash',
-                                textAlign: TextAlign.center,
-                              ),
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: Colors.green),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(17.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
-                  child: Container(
-                    width: 150.0,
-                    height: 250.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(17.0),
-                      border: Border.all(color: Colors.black),
-                    ),
-                    child: Column(
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
-                            child: Image.asset('assets/images/order.png'),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: OutlinedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'My Pickups History',
-                                textAlign: TextAlign.center,
-                              ),
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: Colors.green),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(17.0),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
-        child: Container(
-          child: BottomNavigationBar(
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.menu),
-                label: 'Menu',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.message_outlined),
-                label: 'Notification',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.settings_outlined),
-                label: 'Settings',
-              ),
-            ],
-            currentIndex: 0,
-            onTap: (int index) {
-              switch (index) {
-                case 0:
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Home(
-                              index: 0,
-                            )),
-                  );
-                  break;
-                // case 1:
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => Notifications(index: 1,)),
-                //   );
-                //   break;
-                case 2:
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Settings(
-                              index: 2,
-                            )),
-                  );
-                  break;
-              }
-            },
-            elevation: 0.0,
-            backgroundColor: Colors.transparent,
-            selectedItemColor: Colors.green,
-          ),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(17.0),
-            border: Border.all(color: Colors.black),
           ),
         ),
       ),
