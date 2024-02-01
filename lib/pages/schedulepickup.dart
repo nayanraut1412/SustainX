@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/settings.dart';
-import 'package:sustain_x/pages/calculate_cost.dart';
+import 'package:sustain_x/pages/successfullpage.dart';
 import 'home.dart';
 //import 'settings.dart';
 
@@ -198,7 +198,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => Sample1(
+                                    builder: (context) => Successfullpage(
                                       index: 1,
                                     ),
                                   ),
