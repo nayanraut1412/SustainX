@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/settings.dart';
+import 'package:sustain_x/pages/schedulepickup.dart';
+import 'package:sustain_x/pages/price_enquiry.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key, required this.index}) : super(key: key);
@@ -30,7 +32,7 @@ class Home extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
               child: Text(
-                  'Choose a Service',
+                'Choose a Service',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
@@ -53,7 +55,8 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/truck.png'),
                           ),
                         ),
@@ -62,11 +65,19 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                                onPressed: () {},
-                                child: Text(
-                                    'Schedule a Free Pickup',
-                                  textAlign: TextAlign.center,
-                                ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SchedulePickup(
+                                            index: 1,
+                                          )),
+                                );
+                              },
+                              child: Text(
+                                'Schedule a Free Pickup',
+                                textAlign: TextAlign.center,
+                              ),
                               style: OutlinedButton.styleFrom(
                                 side: BorderSide(color: Colors.green),
                                 shape: RoundedRectangleBorder(
@@ -94,7 +105,8 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/rupee.png'),
                           ),
                         ),
@@ -103,9 +115,17 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Price_Enquiry(
+                                            index: 1,
+                                          )),
+                                );
+                              },
                               child: Text(
-                                  'Price Enquiry',
+                                'Price Enquiry',
                                 textAlign: TextAlign.center,
                               ),
                               style: OutlinedButton.styleFrom(
@@ -139,7 +159,8 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/calculate.png'),
                           ),
                         ),
@@ -150,7 +171,7 @@ class Home extends StatelessWidget {
                             child: OutlinedButton(
                               onPressed: () {},
                               child: Text(
-                                  'Price Your Trash',
+                                'Price Your Trash',
                                 textAlign: TextAlign.center,
                               ),
                               style: OutlinedButton.styleFrom(
@@ -180,7 +201,8 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/order.png'),
                           ),
                         ),
@@ -191,7 +213,7 @@ class Home extends StatelessWidget {
                             child: OutlinedButton(
                               onPressed: () {},
                               child: Text(
-                                  'My Pickups History',
+                                'My Pickups History',
                                 textAlign: TextAlign.center,
                               ),
                               style: OutlinedButton.styleFrom(
@@ -231,12 +253,15 @@ class Home extends StatelessWidget {
               ),
             ],
             currentIndex: 0,
-            onTap: (int index){
-              switch (index){
+            onTap: (int index) {
+              switch (index) {
                 case 0:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home(index: 0,)),
+                    MaterialPageRoute(
+                        builder: (context) => Home(
+                              index: 0,
+                            )),
                   );
                   break;
                 // case 1:
@@ -248,11 +273,14 @@ class Home extends StatelessWidget {
                 case 2:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Settings(index: 2,)),
+                    MaterialPageRoute(
+                        builder: (context) => Settings(
+                              index: 2,
+                            )),
                   );
                   break;
               }
-          },
+            },
             elevation: 0.0,
             backgroundColor: Colors.transparent,
             selectedItemColor: Colors.green,
