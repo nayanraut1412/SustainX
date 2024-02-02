@@ -82,6 +82,9 @@ flutter:
      - assets/images/rupee.png
      - assets/images/calculate.png
      - assets/images/order.png
+<<<<<<< HEAD
+>>>>>>> parent of 62fe02b (Modified Settings.dart)
+=======
 >>>>>>> parent of 62fe02b (Modified Settings.dart)
 
   # An image asset can refer to one or more resolution-specific "variants", see
