@@ -14,16 +14,7 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          // title: const Padding(
-          //   padding: EdgeInsets.fromLTRB(10.0, 10.0, 55.0, 10.0),
-          //   child: Text('Add Location', style: TextStyle(fontSize: 28,
-          //       fontFamily: 'Poppins',
-          //       fontWeight: FontWeight.w500,
-          //       color: Colors.green),),
-          //
-          // ),
-        ),
+        appBar: AppBar(),
         body:
         //const Padding(
         //   padding: EdgeInsets.all(30.0),
@@ -115,33 +106,33 @@ class Register extends StatelessWidget {
                             obscureText: true,
                             obscuringCharacter: '*',
                             decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(21),
-                                  borderSide: BorderSide(
-                                      color: Colors.green
-                                  )
-                              ),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(21),
-                                  borderSide: BorderSide(
-                                      color: Colors.black
-                                  )
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                    borderSide: BorderSide(
+                                        color: Colors.green
+                                    )
+                                ),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
 
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(21),
-                                  borderSide: BorderSide(
-                                      color: Colors.black
-                                  )
-                              ),
-                              labelText: "Password",
-                              hintText: 'Enter your password',
-                              suffixIcon: IconButton(
-                                icon: Icon(Icons.remove_red_eye_outlined),
-                                onPressed: (){
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
+                                ),
+                                labelText: "Password",
+                                hintText: 'Enter your password',
+                                suffixIcon: IconButton(
+                                  icon: Icon(Icons.remove_red_eye_outlined),
+                                  onPressed: (){
 
-                                },
-                              )
+                                  },
+                                )
                               //hoverColor: Colors.green,
                             ),
                           ),
@@ -152,27 +143,27 @@ class Register extends StatelessWidget {
                             obscureText: true,
                             obscuringCharacter: '*',
                             decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(21),
-                                  borderSide: BorderSide(
-                                      color: Colors.green
-                                  )
-                              ),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(21),
-                                  borderSide: BorderSide(
-                                      color: Colors.black
-                                  )
+                                focusedBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                    borderSide: BorderSide(
+                                        color: Colors.green
+                                    )
+                                ),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
 
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(21),
-                                  borderSide: BorderSide(
-                                      color: Colors.black
-                                  )
-                              ),
-                              labelText: "Confirm Password",
-                              hintText: 'Enter your confirm password',
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(21),
+                                    borderSide: BorderSide(
+                                        color: Colors.black
+                                    )
+                                ),
+                                labelText: "Confirm Password",
+                                hintText: 'Enter your confirm password',
                                 suffixIcon: IconButton(
                                   icon: Icon(Icons.remove_red_eye_outlined),
                                   onPressed: (){
@@ -184,33 +175,33 @@ class Register extends StatelessWidget {
                             ),
                           ),
                         ),
-                       Container(
-                         width: 380,
-                         height: 95,
-                         child: Padding(
-                              padding: const EdgeInsets.fromLTRB(0.0, 40.0, 0.0, 0.0),
-                              child: ElevatedButton(
+                        Container(
+                          width: 380,
+                          height: 95,
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(0.0, 40.0, 0.0, 0.0),
+                            child: ElevatedButton(
 
-                                style: ElevatedButton.styleFrom(
+                              style: ElevatedButton.styleFrom(
 
-                                  primary: Colors.orange[300], // Background color
-                                  onPrimary: Colors.black, // Text color
-                                  side: BorderSide(color: Colors.black), // Border color
-                                ),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => Addlocation(index: 1,)),
-                                  );
-                                },
-                                //},
-                                child:Text('Next', style: TextStyle(fontSize: 23,
-                                        fontFamily: 'Poppins',
-                                         fontWeight: FontWeight.w300,
-                                        ),),
+                                primary: Colors.orange[300], // Background color
+                                onPrimary: Colors.black, // Text color
+                                side: BorderSide(color: Colors.black), // Border color
                               ),
-                         ),
-                       ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Addlocation(index: 1,)),
+                                );
+                              },
+                              //},
+                              child:Text('Next', style: TextStyle(fontSize: 23,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w300,
+                              ),),
+                            ),
+                          ),
+                        ),
                         Padding(
                           padding: const EdgeInsets.fromLTRB(128.0, 30.0, 0.0, 0.0),
                           child: Text('Or continue with', style: TextStyle(fontSize: 15,
@@ -243,9 +234,9 @@ class Register extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.only(right: 10.0),
                                     child: Image.asset(
-                                      'assets/images/google.png', // Replace with your Google logo asset
-                                      width: 30, // Adjust the width as needed
-                                      height: 30, // Adjust the height as needed
+                                      'assets/images/google.png',
+                                      width: 30,
+                                      height: 30,
                                     ),
                                   ),
                                   Text(
@@ -261,10 +252,6 @@ class Register extends StatelessWidget {
                             ),
                           ),
                         ),
-
-
-
-
 
 
                       ],
