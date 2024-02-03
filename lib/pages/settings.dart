@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'package:sustain_x/pages/notification.dart';
 
 class Settings extends StatelessWidget {
   const Settings({super.key, required this.index});
@@ -11,7 +12,7 @@ class Settings extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            'Your Profile',
+          'Your Profile',
           style: TextStyle(
             fontSize: 28,
             fontFamily: 'Poppins',
@@ -35,7 +36,7 @@ class Settings extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                  'Name',
+                'Name',
                 style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'Poppins',
@@ -47,11 +48,14 @@ class Settings extends StatelessWidget {
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
-                border: Border.all(color: Colors.green, width: 2,),
+                border: Border.all(
+                  color: Colors.green,
+                  width: 2,
+                ),
               ),
               child: Center(
                 child: Text(
-                    'Ninad Lunge',
+                  'Ninad Lunge',
                   // textAlign: TextAlign.start,
                   style: TextStyle(
                     fontFamily: 'Poppins',
@@ -74,7 +78,10 @@ class Settings extends StatelessWidget {
               height: 100.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
-                border: Border.all(color: Colors.green, width: 2,),
+                border: Border.all(
+                  color: Colors.green,
+                  width: 2,
+                ),
               ),
               child: Center(
                 child: Padding(
@@ -104,7 +111,10 @@ class Settings extends StatelessWidget {
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
-                border: Border.all(color: Colors.green, width: 2,),
+                border: Border.all(
+                  color: Colors.green,
+                  width: 2,
+                ),
               ),
               child: Center(
                 child: Text(
@@ -131,7 +141,10 @@ class Settings extends StatelessWidget {
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
-                border: Border.all(color: Colors.green, width: 2,),
+                border: Border.all(
+                  color: Colors.green,
+                  width: 2,
+                ),
               ),
               child: Center(
                 child: Text(
@@ -165,24 +178,33 @@ class Settings extends StatelessWidget {
               ),
             ],
             currentIndex: 2,
-            onTap: (int index){
-              switch (index){
+            onTap: (int index) {
+              switch (index) {
                 case 0:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home(index: 0,)),
+                    MaterialPageRoute(
+                        builder: (context) => Home(
+                              index: 0,
+                            )),
                   );
                   break;
-                // case 1:
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => Notifications(index: 1,)),
-                //   );
-                //   break;
+                case 1:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notifications(
+                              index: 1,
+                            )),
+                  );
+                  break;
                 case 2:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Settings(index: 2,)),
+                    MaterialPageRoute(
+                        builder: (context) => Settings(
+                              index: 2,
+                            )),
                   );
                   break;
               }

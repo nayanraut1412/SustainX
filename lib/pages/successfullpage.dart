@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 
 import 'home.dart';
 import 'settings.dart';
+import 'package:sustain_x/pages/notification.dart';
 
 class Successfullpage extends StatelessWidget {
   const Successfullpage({Key? key, required this.index}) : super(key: key);
@@ -129,6 +130,15 @@ class Successfullpage extends StatelessWidget {
                         index: 0,
                       ),
                     ),
+                  );
+                  break;
+                case 1:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notifications(
+                              index: 1,
+                            )),
                   );
                   break;
                 case 2:

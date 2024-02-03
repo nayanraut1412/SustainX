@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/settings.dart';
+import 'package:sustain_x/pages/notification.dart';
+
 import 'home.dart';
 
 class CostCalculation extends StatefulWidget {
@@ -218,6 +220,15 @@ class _CostCalculationState extends State<CostCalculation> {
                         index: 0,
                       ),
                     ),
+                  );
+                  break;
+                case 1:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notifications(
+                              index: 1,
+                            )),
                   );
                   break;
                 case 2:

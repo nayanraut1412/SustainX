@@ -9,177 +9,116 @@ class Start extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.green,
-      // ),
       body: Center(
         child: Container(
-          width: 450,
-          height: 990,
+          width: double.infinity,
+          height: double.infinity,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/layer.png'),
               fit: BoxFit.cover,
             ),
           ),
-          child: SingleChildScrollView(
-              child: Center(
-            child: Container(
-
-                // width: 380,
-                // height: 790,
-                child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Stack(
-                  children: [
-                    // Background text with stroke
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0.0, 80.0, 0.0, 0.0),
-                      child: Center(
-                        child: Text(
-                          'Welcome',
-                          style: TextStyle(
-                            fontSize: 58,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            foreground: Paint()
-                              ..style = PaintingStyle.stroke
-                              ..strokeWidth = 2
-                              ..color = Colors.black,
-                          ),
-                        ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Stack(
+                    children: [
+                      buildTextWithStroke(context, 'Welcome', 80.0),
+                      buildText(context, 'Welcome', 80.0, Colors.white),
+                      buildTextWithStroke(context, 'To', 145.0),
+                      buildText(context, 'To', 145.0, Colors.white),
+                      buildTextWithStroke(context, 'SustainX', 210.0),
+                      buildText(context, 'SustainX', 210.0, Colors.white),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Center(
+                      child: Image.asset(
+                        'assets/images/recyclingwork.png',
+                        width: MediaQuery.of(context).size.width * 0.9,
+                        height: MediaQuery.of(context).size.height * 0.3,
                       ),
-                    ),
-                    // Foreground text
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0.0, 80.0, 0.0, 0.0),
-                      child: Center(
-                        child: Text(
-                          'Welcome',
-                          style: TextStyle(
-                            fontSize: 58,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Padding(
-                      padding:
-                          const EdgeInsets.fromLTRB(0.0, 155.0, 0.0, 0.0),
-                      child: Center(
-                        child: Text(
-                          'To',
-                          style: TextStyle(
-                            fontSize: 58,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            foreground: Paint()
-                              ..style = PaintingStyle.stroke
-                              ..strokeWidth = 2
-                              ..color = Colors.black,
-                          ),
-                        ),
-                      ),
-                    ),
-                    // Foreground text
-                    Padding(
-                      padding:
-                          const EdgeInsets.fromLTRB(0.0, 155.0, 0.0, 0.0),
-                      child: Center(
-                        child: Text(
-                          'To',
-                          style: TextStyle(
-                            fontSize: 58,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-
-                    Padding(
-                      padding:
-                          const EdgeInsets.fromLTRB(0.0, 230.0, 0.0, 0.0),
-                      child: Center(
-                        child: Text(
-                          'SustainX',
-                          style: TextStyle(
-                            fontSize: 58,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            foreground: Paint()
-                              ..style = PaintingStyle.stroke
-                              ..strokeWidth = 2
-                              ..color = Colors.black,
-                          ),
-                        ),
-                      ),
-                    ),
-                    // Foreground text
-                    Padding(
-                      padding:
-                          const EdgeInsets.fromLTRB(0.0, 230.0, 0.0, 0.0),
-                      child: Center(
-                        child: Text(
-                          'SustainX',
-                          style: TextStyle(
-                            fontSize: 58,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 5.0),
-                    child: Image.asset(
-                      'assets/images/recyclingwork.png',
-                      width: 250,
-                      height: 250,
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(80.0, 100.0, 0.0, 5.0),
-                  child: Text(
-                    'Plastics | Paper | Metals | Ewaste',
-                    style: TextStyle(
-                        fontSize: 15,
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.12,
+                  ),
+                  Center(
+                    child: Text(
+                      'Plastics | Paper | Metals | Ewaste',
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.04,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w500,
-                        color: Colors.grey[500]),
+                        color: Colors.grey[500],
+                      ),
+                    ),
                   ),
-                ),
-                Center(
-                  child: IconButton(
+                  SizedBox(height: 20),
+                  IconButton(
                     icon: Icon(
                       Icons.arrow_circle_right_rounded,
-                      size: 50.0, // Adjust the size as needed
+                      size: MediaQuery.of(context).size.width * 0.14,
                       color: Color(0xFF1BE417),
                     ),
                     onPressed: () {
-                      // Add your navigation logic here
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => Login(index: 0)),
+                          builder: (context) => Login(index: 0),
+                        ),
                       );
                     },
                   ),
-                ),
-              ],
-            )),
-          )),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildText(
+      BuildContext context, String text, double topPadding, Color textColor) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(0.0, topPadding, 0.0, 0.0),
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+            fontSize: MediaQuery.of(context).size.width * 0.1,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w700,
+            color: textColor,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget buildTextWithStroke(
+      BuildContext context, String text, double topPadding) {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(0.0, topPadding, 0.0, 0.0),
+      child: Center(
+        child: Text(
+          text,
+          style: TextStyle(
+            fontSize: MediaQuery.of(context).size.width * 0.1,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w700,
+            foreground: Paint()
+              ..style = PaintingStyle.stroke
+              ..strokeWidth = 2
+              ..color = Colors.black,
+          ),
         ),
       ),
     );

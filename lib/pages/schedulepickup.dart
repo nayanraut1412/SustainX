@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/settings.dart';
 import 'package:sustain_x/pages/successfullpage.dart';
+import 'package:sustain_x/pages/notification.dart';
+
 import 'home.dart';
 
 class SchedulePickup extends StatefulWidget {
@@ -23,6 +25,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -236,6 +239,15 @@ class _SchedulePickupState extends State<SchedulePickup> {
                         index: 0,
                       ),
                     ),
+                  );
+                  break;
+                case 1:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notifications(
+                              index: 1,
+                            )),
                   );
                   break;
                 case 2:

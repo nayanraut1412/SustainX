@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sustain_x/pages/settings.dart';
-import 'package:sustain_x/pages/schedulepickup.dart';
-import 'home.dart';
 
 class Price_Enquiry extends StatelessWidget {
   const Price_Enquiry({Key? key, required this.index}) : super(key: key);

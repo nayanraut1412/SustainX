@@ -3,6 +3,8 @@ import 'package:sustain_x/pages/settings.dart';
 import 'package:sustain_x/pages/schedulepickup.dart';
 import 'package:sustain_x/pages/price_enquiry.dart';
 import 'package:sustain_x/pages/costcalculation.dart';
+import 'package:sustain_x/pages/pickuphistory.dart';
+import 'package:sustain_x/pages/notification.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key, required this.index}) : super(key: key);
@@ -220,7 +222,15 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => PickupHistory(
+                                            index: 1,
+                                          )),
+                                );
+                              },
                               child: Text(
                                 'My Pickups History',
                                 textAlign: TextAlign.center,
@@ -273,12 +283,15 @@ class Home extends StatelessWidget {
                             )),
                   );
                   break;
-                // case 1:
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => Notifications(index: 1,)),
-                //   );
-                //   break;
+                case 1:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notifications(
+                              index: 1,
+                            )),
+                  );
+                  break;
                 case 2:
                   Navigator.push(
                     context,
