@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/settings.dart';
 import 'package:sustain_x/pages/successfullpage.dart';
 import 'home.dart';
-//import 'settings.dart';
 
 class SchedulePickup extends StatefulWidget {
   const SchedulePickup({Key? key, required this.index}) : super(key: key);
@@ -24,202 +23,197 @@ class _SchedulePickupState extends State<SchedulePickup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Center(
-        child: Container(
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(15.0, 0.0, 12.0, 0.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 0.0, horizontal: 0),
-                    child: Text(
-                      'Schedule a Free Pickup',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 28.0,
-                      ),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 0.0, horizontal: 0),
+                  child: Text(
+                    'Schedule a Free Pickup',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 28.0,
                     ),
                   ),
-                  Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding:
-                              const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
-                          child: TextField(
-                            keyboardType: TextInputType.text,
-                            onTap: () async {
-                              await _selectDate(context);
-                            },
-                            controller: dateController,
-                            readOnly: true,
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.green),
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.black),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.black),
-                              ),
-                              labelText: "Select a pickup date",
-                              suffixIcon: IconButton(
-                                icon: const Icon(Icons.date_range_outlined),
-                                onPressed: () async {
-                                  await _selectDate(context);
-                                },
-                              ),
+                ),
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                        child: TextField(
+                          keyboardType: TextInputType.text,
+                          onTap: () async {
+                            await _selectDate(context);
+                          },
+                          controller: dateController,
+                          readOnly: true,
+                          decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.green),
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
-                          child: TextField(
-                            onTap: () async {
-                              await _selectTime(context);
-                            },
-                            controller: timeController,
-                            readOnly: true,
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.green),
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.black),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.black),
-                              ),
-                              labelText: "Add your preferred time",
-                              suffixIcon: IconButton(
-                                icon: const Icon(Icons.access_time_outlined),
-                                onPressed: () async {
-                                  await _selectTime(context);
-                                },
-                              ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.black),
                             ),
-                          ),
-                        ),
-                        Padding(
-                          padding:
-                              const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 8.0),
-                          child: Text(
-                            'Confirm Pickup Location',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black,
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.black),
                             ),
-                          ),
-                        ),
-                        Image.asset('assets/images/map1.png'),
-                        Padding(
-                          padding:
-                              const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
-                          child: TextField(
-                            controller: locationController,
-                            decoration: InputDecoration(
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.green),
-                              ),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.black),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(21),
-                                borderSide:
-                                    const BorderSide(color: Colors.black),
-                              ),
-                              labelText: "House No. 10, Street, City",
-                              suffixIcon: IconButton(
-                                icon: const Icon(Icons.home_work_outlined),
-                                onPressed: () {},
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 380,
-                          height: 95,
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 12.0),
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                primary: Colors.orange[300],
-                                onPrimary: Colors.black,
-                                side: const BorderSide(color: Colors.black),
-                              ),
-                              onPressed: () {
-                                if (selectedDate == null ||
-                                    selectedTime == null ||
-                                    locationController.text.isEmpty) {
-                                  _showAlert(context,
-                                      "Please fill all fields before scheduling pickup.");
-                                  return;
-                                }
-
-                                // Use selectedDate and selectedTime as needed
-                                String pickupDetails = '';
-                                pickupDetails +=
-                                    'Date: ${selectedDate!.toLocal()}';
-                                pickupDetails +=
-                                    '\nTime: ${selectedTime!.format(context)}';
-                                pickupDetails +=
-                                    '\nLocation: ${locationController.text}';
-                                print(pickupDetails);
-
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => Successfullpage(
-                                      index: 1,
-                                    ),
-                                  ),
-                                );
+                            labelText: "Select a pickup date",
+                            suffixIcon: IconButton(
+                              icon: const Icon(Icons.date_range_outlined),
+                              onPressed: () async {
+                                await _selectDate(context);
                               },
-                              child: const Text(
-                                'Schedule Pickup',
-                                style: TextStyle(
-                                  fontSize: 23,
-                                  fontFamily: 'Poppins',
-                                  fontWeight: FontWeight.w300,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                        child: TextField(
+                          onTap: () async {
+                            await _selectTime(context);
+                          },
+                          controller: timeController,
+                          readOnly: true,
+                          decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.green),
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.black),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.black),
+                            ),
+                            labelText: "Add your preferred time",
+                            suffixIcon: IconButton(
+                              icon: const Icon(Icons.access_time_outlined),
+                              onPressed: () async {
+                                await _selectTime(context);
+                              },
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 8.0),
+                        child: Text(
+                          'Confirm Pickup Location',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontFamily: 'Poppins',
+                            fontWeight: FontWeight.w400,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      Image.asset('assets/images/map1.png'),
+                      Padding(
+                        padding:
+                            const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                        child: TextField(
+                          controller: locationController,
+                          decoration: InputDecoration(
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.green),
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.black),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(21),
+                              borderSide:
+                                  const BorderSide(color: Colors.black),
+                            ),
+                            labelText: "House No. 10, Street, City",
+                            suffixIcon: IconButton(
+                              icon: const Icon(Icons.home_work_outlined),
+                              onPressed: () {},
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 380,
+                        height: 90,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.orange[300],
+                              onPrimary: Colors.black,
+                              side: const BorderSide(color: Colors.black),
+                            ),
+                            onPressed: () {
+                              if (selectedDate == null ||
+                                  selectedTime == null ||
+                                  locationController.text.isEmpty) {
+                                _showAlert(context,
+                                    "Please fill all fields before scheduling pickup.");
+                                return;
+                              }
+
+                              // Use selectedDate and selectedTime as needed
+                              String pickupDetails = '';
+                              pickupDetails +=
+                                  'Date: ${selectedDate!.toLocal()}';
+                              pickupDetails +=
+                                  '\nTime: ${selectedTime!.format(context)}';
+                              pickupDetails +=
+                                  '\nLocation: ${locationController.text}';
+                              print(pickupDetails);
+
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Successfullpage(
+                                    index: 1,
+                                  ),
                                 ),
+                              );
+                            },
+                            child: const Text(
+                              'Schedule Pickup',
+                              style: TextStyle(
+                                fontSize: 23,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
