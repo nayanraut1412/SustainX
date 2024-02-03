@@ -26,14 +26,14 @@ class _SchedulePickupState extends State<SchedulePickup> {
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
+            padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 0.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 0.0, horizontal: 0),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 0.0, horizontal: 0),
                   child: Text(
                     'Schedule a Free Pickup',
                     style: TextStyle(
@@ -59,18 +59,15 @@ class _SchedulePickupState extends State<SchedulePickup> {
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.green),
+                              borderSide: const BorderSide(color: Colors.green),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.black),
+                              borderSide: const BorderSide(color: Colors.black),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.black),
+                              borderSide: const BorderSide(color: Colors.black),
                             ),
                             labelText: "Select a pickup date",
                             suffixIcon: IconButton(
@@ -83,8 +80,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                        padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
                         child: TextField(
                           onTap: () async {
                             await _selectTime(context);
@@ -94,18 +90,15 @@ class _SchedulePickupState extends State<SchedulePickup> {
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.green),
+                              borderSide: const BorderSide(color: Colors.green),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.black),
+                              borderSide: const BorderSide(color: Colors.black),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.black),
+                              borderSide: const BorderSide(color: Colors.black),
                             ),
                             labelText: "Add your preferred time",
                             suffixIcon: IconButton(
@@ -118,8 +111,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 8.0),
+                        padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 8.0),
                         child: Text(
                           'Confirm Pickup Location',
                           style: TextStyle(
@@ -132,25 +124,21 @@ class _SchedulePickupState extends State<SchedulePickup> {
                       ),
                       Image.asset('assets/images/map1.png'),
                       Padding(
-                        padding:
-                            const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                        padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
                         child: TextField(
                           controller: locationController,
                           decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.green),
+                              borderSide: const BorderSide(color: Colors.green),
                             ),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.black),
+                              borderSide: const BorderSide(color: Colors.black),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(21),
-                              borderSide:
-                                  const BorderSide(color: Colors.black),
+                              borderSide: const BorderSide(color: Colors.black),
                             ),
                             labelText: "House No. 10, Street, City",
                             suffixIcon: IconButton(
@@ -164,7 +152,8 @@ class _SchedulePickupState extends State<SchedulePickup> {
                         width: 380,
                         height: 90,
                         child: Padding(
-                          padding: const EdgeInsets.fromLTRB(0.0, 15.0, 0.0, 15.0),
+                          padding:
+                              const EdgeInsets.fromLTRB(0.0, 25.0, 0.0, 5.0),
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Colors.orange[300],

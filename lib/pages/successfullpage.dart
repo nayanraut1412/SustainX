@@ -16,85 +16,88 @@ class Successfullpage extends StatelessWidget {
     return Scaffold(
       //appBar: AppBar(),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Stack(
-              children: [
-                // Background text with stroke
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(40.0, 150.0, 0.0, 0.0),
-                  child: Text(
-                    'Pickup Scheduled',
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 1
-                        ..color = Colors.black,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Stack(
+                children: [
+                  // Background text with stroke
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10.0, 100.0, 10.0, 0.0),
+                    child: Text(
+                      'Pickup Scheduled',
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        foreground: Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 1
+                          ..color = Colors.black,
+                      ),
                     ),
                   ),
-                ),
-                // Foreground text
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(40.0, 150.0, 0.0, 0.0),
-                  child: Text(
-                    'Pickup Scheduled',
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xFF1BE417),
+                  // Foreground text
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10.0, 100.0, 10.0, 0.0),
+                    child: Text(
+                      'Pickup Scheduled',
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF1BE417),
+                      ),
                     ),
                   ),
-                ),
 
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(80.0, 200.0, 0.0, 0.0),
-                  child: Text(
-                    'Successfully!',
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700,
-                      foreground: Paint()
-                        ..style = PaintingStyle.stroke
-                        ..strokeWidth = 1
-                        ..color = Colors.black,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50.0, 150.0, 10.0, 0.0),
+                    child: Text(
+                      'Successfully!',
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        foreground: Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 1
+                          ..color = Colors.black,
+                      ),
                     ),
                   ),
-                ),
-                // Foreground text
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(80.0, 200.0, 0.0, 0.0),
-                  child: Text(
-                    'Successfully!',
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xFF1BE417),
+                  // Foreground text
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(50.0, 150.0, 10.0, 0.0),
+                    child: Text(
+                      'Successfully!',
+                      style: TextStyle(
+                        fontSize: 36,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF1BE417),
+                      ),
                     ),
                   ),
-                ),
 
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0.0, 230.0, 0.0, 0.0),
-                  child: Lottie.asset(
-                    'assets/animations/done_animation.json',
-                    width: 490,
-                    // height: 490,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0.0, 200.0, 0.0, 0.0),
+                    child: Lottie.asset(
+                      'assets/animations/done_animation.json',
+                      width: 490,
+                      // height: 490,
 
-                    repeat: false,
-                    fit: BoxFit.contain,
+                      repeat: false,
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: Padding(
