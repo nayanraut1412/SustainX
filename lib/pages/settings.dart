@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'home.dart';
 
 class Settings extends StatelessWidget {
@@ -20,7 +19,133 @@ class Settings extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/images/user.png'),
+                radius: 40.0,
+                backgroundColor: Colors.transparent,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                  'Name',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+            Container(
+              width: 370.0,
+              height: 60.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(17.0),
+                border: Border.all(color: Colors.green, width: 2,),
+              ),
+              child: Center(
+                child: Text(
+                    'Ninad Lunge',
+                  // textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Address',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+            Container(
+              width: 370.0,
+              height: 100.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(17.0),
+                border: Border.all(color: Colors.green, width: 2,),
+              ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Near Jan Sangram Printing Press, Gond Plot, Ward No.20, Wardha',
+                    // textAlign: TextAlign.start,
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Contact Number',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+            Container(
+              width: 370.0,
+              height: 60.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(17.0),
+                border: Border.all(color: Colors.green, width: 2,),
+              ),
+              child: Center(
+                child: Text(
+                  '+91 9405908266',
+                  // textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Email',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'Poppins',
+                ),
+              ),
+            ),
+            Container(
+              width: 370.0,
+              height: 60.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(17.0),
+                border: Border.all(color: Colors.green, width: 2,),
+              ),
+              child: Center(
+                child: Text(
+                  'niandlunge@gmail.com',
+                  // textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0),
         child: Container(
