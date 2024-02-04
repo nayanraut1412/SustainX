@@ -21,8 +21,9 @@ class Settings extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        padding: const EdgeInsets.fromLTRB(30.0, 20.0, 30.0, 0.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
@@ -32,7 +33,7 @@ class Settings extends StatelessWidget {
                 backgroundColor: Colors.transparent,
               ),
             ),
-            SizedBox(height: 10.0),
+            SizedBox(height: 20.0),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
@@ -44,7 +45,7 @@ class Settings extends StatelessWidget {
               ),
             ),
             Container(
-              width: 370.0,
+              width: double.infinity,
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
@@ -53,7 +54,8 @@ class Settings extends StatelessWidget {
                   width: 2,
                 ),
               ),
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
                 child: Text(
                   'Ninad Lunge',
                   // textAlign: TextAlign.start,
@@ -74,8 +76,7 @@ class Settings extends StatelessWidget {
               ),
             ),
             Container(
-              width: 370.0,
-              height: 100.0,
+              height: 80.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
                 border: Border.all(
@@ -85,7 +86,7 @@ class Settings extends StatelessWidget {
               ),
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(18.0),
                   child: Text(
                     'Near Jan Sangram Printing Press, Gond Plot, Ward No.20, Wardha',
                     // textAlign: TextAlign.start,
@@ -107,7 +108,7 @@ class Settings extends StatelessWidget {
               ),
             ),
             Container(
-              width: 370.0,
+              width: double.infinity,
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
@@ -116,7 +117,8 @@ class Settings extends StatelessWidget {
                   width: 2,
                 ),
               ),
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
                 child: Text(
                   '+91 9405908266',
                   // textAlign: TextAlign.start,
@@ -137,7 +139,7 @@ class Settings extends StatelessWidget {
               ),
             ),
             Container(
-              width: 370.0,
+              width: double.infinity,
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
@@ -146,9 +148,10 @@ class Settings extends StatelessWidget {
                   width: 2,
                 ),
               ),
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
                 child: Text(
-                  'niandlunge@gmail.com',
+                  'ninadlunge@gmail.com',
                   // textAlign: TextAlign.start,
                   style: TextStyle(
                     fontFamily: 'Poppins',

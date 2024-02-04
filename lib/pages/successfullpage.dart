@@ -16,22 +16,22 @@ class Successfullpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //appBar: AppBar(),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Stack(
-                children: [
-                  // Background text with stroke
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(10.0, 100.0, 10.0, 0.0),
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Stack(
+              children: [
+                // Background text with stroke
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
                     child: Text(
                       'Pickup Scheduled',
                       style: TextStyle(
-                        fontSize: 36,
+                        fontSize: 30,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w700,
                         foreground: Paint()
@@ -41,26 +41,30 @@ class Successfullpage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Foreground text
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(10.0, 100.0, 10.0, 0.0),
+                ),
+                // Foreground text
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
                     child: Text(
                       'Pickup Scheduled',
                       style: TextStyle(
-                        fontSize: 36,
+                        fontSize: 30,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w700,
                         color: Color(0xFF1BE417),
                       ),
                     ),
                   ),
+                ),
 
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(50.0, 150.0, 10.0, 0.0),
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0.0, 150.0, 0.0, 0.0),
                     child: Text(
                       'Successfully!',
                       style: TextStyle(
-                        fontSize: 36,
+                        fontSize: 30,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w700,
                         foreground: Paint()
@@ -70,35 +74,37 @@ class Successfullpage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Foreground text
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(50.0, 150.0, 10.0, 0.0),
+                ),
+                // Foreground text
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0.0, 150.0, 0.0, 0.0),
                     child: Text(
                       'Successfully!',
                       style: TextStyle(
-                        fontSize: 36,
+                        fontSize: 30,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w700,
                         color: Color(0xFF1BE417),
                       ),
                     ),
                   ),
+                ),
 
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0.0, 200.0, 0.0, 0.0),
-                    child: Lottie.asset(
-                      'assets/animations/done_animation.json',
-                      width: 490,
-                      // height: 490,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0.0, 200.0, 0.0, 0.0),
+                  child: Lottie.asset(
+                    'assets/animations/done_animation.json',
+                    width: 490,
+                    // height: 490,
 
-                      repeat: false,
-                      fit: BoxFit.contain,
-                    ),
+                    repeat: false,
+                    fit: BoxFit.contain,
                   ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: Padding(

@@ -25,33 +25,35 @@ class _SchedulePickupState extends State<SchedulePickup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 0.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 0.0, horizontal: 0),
-                  child: Text(
-                    'Schedule a Free Pickup',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 28.0,
-                    ),
+      appBar: AppBar(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 00.0, horizontal: 0),
+                child: Text(
+                  'Schedule a Free Pickup',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28.0,
                   ),
                 ),
-                Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+              ),
+              Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0.0, 05.0, 0.0, 0.0),
+                      child: Container(
+                        //width: 220,
+                        height: 65,
                         child: TextField(
                           keyboardType: TextInputType.text,
                           onTap: () async {
@@ -82,8 +84,11 @@ class _SchedulePickupState extends State<SchedulePickup> {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                      child: Container(
+                        height: 65,
                         child: TextField(
                           onTap: () async {
                             await _selectTime(context);
@@ -113,21 +118,24 @@ class _SchedulePickupState extends State<SchedulePickup> {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 8.0),
-                        child: Text(
-                          'Confirm Pickup Location',
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black,
-                          ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 8.0),
+                      child: Text(
+                        'Confirm Pickup Location',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
                         ),
                       ),
-                      Image.asset('assets/images/map1.png'),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
+                    ),
+                    Image.asset('assets/images/map1.png'),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                      child: Container(
+                        height: 65,
                         child: TextField(
                           controller: locationController,
                           decoration: InputDecoration(
@@ -151,62 +159,60 @@ class _SchedulePickupState extends State<SchedulePickup> {
                           ),
                         ),
                       ),
-                      Container(
-                        width: 380,
-                        height: 90,
-                        child: Padding(
-                          padding:
-                              const EdgeInsets.fromLTRB(0.0, 25.0, 0.0, 5.0),
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.orange[300],
-                              onPrimary: Colors.black,
-                              side: const BorderSide(color: Colors.black),
-                            ),
-                            onPressed: () {
-                              if (selectedDate == null ||
-                                  selectedTime == null ||
-                                  locationController.text.isEmpty) {
-                                _showAlert(context,
-                                    "Please fill all fields before scheduling pickup.");
-                                return;
-                              }
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 60,
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.orange[300],
+                            onPrimary: Colors.black,
+                            side: const BorderSide(color: Colors.black),
+                          ),
+                          onPressed: () {
+                            if (selectedDate == null ||
+                                selectedTime == null ||
+                                locationController.text.isEmpty) {
+                              _showAlert(context,
+                                  "Please fill all fields before scheduling pickup.");
+                              return;
+                            }
 
-                              // Use selectedDate and selectedTime as needed
-                              String pickupDetails = '';
-                              pickupDetails +=
-                                  'Date: ${selectedDate!.toLocal()}';
-                              pickupDetails +=
-                                  '\nTime: ${selectedTime!.format(context)}';
-                              pickupDetails +=
-                                  '\nLocation: ${locationController.text}';
-                              print(pickupDetails);
+                            // Use selectedDate and selectedTime as needed
+                            String pickupDetails = '';
+                            pickupDetails += 'Date: ${selectedDate!.toLocal()}';
+                            pickupDetails +=
+                                '\nTime: ${selectedTime!.format(context)}';
+                            pickupDetails +=
+                                '\nLocation: ${locationController.text}';
+                            print(pickupDetails);
 
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => Successfullpage(
-                                    index: 1,
-                                  ),
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Successfullpage(
+                                  index: 1,
                                 ),
-                              );
-                            },
-                            child: const Text(
-                              'Schedule Pickup',
-                              style: TextStyle(
-                                fontSize: 23,
-                                fontFamily: 'Poppins',
-                                fontWeight: FontWeight.w300,
                               ),
+                            );
+                          },
+                          child: const Text(
+                            'Schedule Pickup',
+                            style: TextStyle(
+                              fontSize: 23,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w300,
                             ),
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

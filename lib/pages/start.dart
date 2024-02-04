@@ -9,75 +9,73 @@ class Start extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/layer.png'),
-              fit: BoxFit.cover,
-            ),
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/layer.png'),
+            fit: BoxFit.cover,
           ),
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Stack(
-                    children: [
-                      buildTextWithStroke(context, 'Welcome', 80.0),
-                      buildText(context, 'Welcome', 80.0, Colors.white),
-                      buildTextWithStroke(context, 'To', 145.0),
-                      buildText(context, 'To', 145.0, Colors.white),
-                      buildTextWithStroke(context, 'SustainX', 210.0),
-                      buildText(context, 'SustainX', 210.0, Colors.white),
-                    ],
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Stack(
+                  children: [
+                    buildTextWithStroke(context, 'Welcome', 80.0),
+                    buildText(context, 'Welcome', 80.0, Colors.white),
+                    buildTextWithStroke(context, 'To', 145.0),
+                    buildText(context, 'To', 145.0, Colors.white),
+                    buildTextWithStroke(context, 'SustainX', 210.0),
+                    buildText(context, 'SustainX', 210.0, Colors.white),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/images/recyclingwork.png',
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      height: MediaQuery.of(context).size.height * 0.3,
+                    ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                      child: Image.asset(
-                        'assets/images/recyclingwork.png',
-                        width: MediaQuery.of(context).size.width * 0.9,
-                        height: MediaQuery.of(context).size.height * 0.3,
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.12,
+                ),
+                Center(
+                  child: Text(
+                    'Plastics | Paper | Metals | Ewaste',
+                    style: TextStyle(
+                      fontSize: MediaQuery.of(context).size.width * 0.04,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey[500],
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                IconButton(
+                  icon: Icon(
+                    Icons.arrow_circle_right_rounded,
+                    size: MediaQuery.of(context).size.width * 0.14,
+                    color: Color(0xFF1BE417),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Login(index: 0),
                       ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.12,
-                  ),
-                  Center(
-                    child: Text(
-                      'Plastics | Paper | Metals | Ewaste',
-                      style: TextStyle(
-                        fontSize: MediaQuery.of(context).size.width * 0.04,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        color: Colors.grey[500],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  IconButton(
-                    icon: Icon(
-                      Icons.arrow_circle_right_rounded,
-                      size: MediaQuery.of(context).size.width * 0.14,
-                      color: Color(0xFF1BE417),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Login(index: 0),
-                        ),
-                      );
-                    },
-                  ),
-                ],
-              ),
+                    );
+                  },
+                ),
+              ],
             ),
           ),
         ),

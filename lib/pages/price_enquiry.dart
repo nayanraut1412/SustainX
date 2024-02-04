@@ -19,7 +19,7 @@ class Price_Enquiry extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0, 0.0, 30.0, 0.0),
+        padding: const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0.0),
         child: SingleChildScrollView(
           child: Column(
             // mainAxisAlignment: MainAxisAlignment.start,
@@ -79,8 +79,8 @@ class Price_Enquiry extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                width: 150.0,
-                                height: 120.0,
+                                width: 140.0,
+                                height: 110.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(17.0),
                                   border: Border.all(color: Colors.black),
@@ -138,8 +138,8 @@ class Price_Enquiry extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                width: 150.0,
-                                height: 120.0,
+                                width: 140.0,
+                                height: 110.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(17.0),
                                   border: Border.all(color: Colors.black),
@@ -204,8 +204,8 @@ class Price_Enquiry extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 150.0,
-                                  height: 120.0,
+                                  width: 140.0,
+                                  height: 110.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(17.0),
                                     border: Border.all(color: Colors.black),
@@ -263,8 +263,8 @@ class Price_Enquiry extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 150.0,
-                                  height: 120.0,
+                                  width: 140.0,
+                                  height: 110.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(17.0),
                                     border: Border.all(color: Colors.black),
@@ -330,8 +330,8 @@ class Price_Enquiry extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 150.0,
-                                  height: 120.0,
+                                  width: 140.0,
+                                  height: 110.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(17.0),
                                     border: Border.all(color: Colors.black),
@@ -389,8 +389,8 @@ class Price_Enquiry extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 150.0,
-                                  height: 120.0,
+                                  width: 140.0,
+                                  height: 110.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(17.0),
                                     border: Border.all(color: Colors.black),
@@ -456,8 +456,8 @@ class Price_Enquiry extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 150.0,
-                                  height: 120.0,
+                                  width: 140.0,
+                                  height: 110.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(17.0),
                                     border: Border.all(color: Colors.black),
@@ -515,8 +515,8 @@ class Price_Enquiry extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                  width: 150.0,
-                                  height: 120.0,
+                                  width: 140.0,
+                                  height: 110.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(17.0),
                                     border: Border.all(color: Colors.black),
@@ -592,8 +592,8 @@ class Price_Enquiry extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                width: 150.0,
-                                height: 120.0,
+                                width: 140.0,
+                                height: 110.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(17.0),
                                   border: Border.all(color: Colors.black),
@@ -651,8 +651,8 @@ class Price_Enquiry extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                width: 150.0,
-                                height: 120.0,
+                                width: 140.0,
+                                height: 110.0,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(17.0),
                                   border: Border.all(color: Colors.black),
