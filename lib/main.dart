@@ -13,9 +13,13 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SustainX',
-      home: Start(
-        index: 0,
-      ),
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => Start(index: null,),
+      },
+      // home: Start(
+      //   index: 0,
+      // ),
     );
   }
 }

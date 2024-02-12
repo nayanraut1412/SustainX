@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/login.dart';
 
 class Start extends StatelessWidget {
-  const Start({Key? key, required this.index}) : super(key: key);
+  const Start({super.key, required this.index});
 
   final int index;
 
