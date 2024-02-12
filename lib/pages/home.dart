@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/settings.dart';
 import 'package:sustain_x/pages/schedulepickup.dart';
 import 'package:sustain_x/pages/price_enquiry.dart';
+import 'package:sustain_x/pages/costcalculation.dart';
+import 'package:sustain_x/pages/pickuphistory.dart';
+import 'package:sustain_x/pages/notification.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key, required this.index}) : super(key: key);
@@ -25,12 +28,13 @@ class Home extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0.0),
+        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
+              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 05.0),
               child: Text(
                 'Choose a Service',
                 style: TextStyle(
@@ -40,12 +44,14 @@ class Home extends StatelessWidget {
               ),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 20.0, 20.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 05.0, vertical: 05.0),
                   child: Container(
                     width: 150.0,
-                    height: 250.0,
+                    height: 230.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(color: Colors.black),
@@ -92,10 +98,11 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 20.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 05.0, vertical: 05.0),
                   child: Container(
                     width: 150.0,
-                    height: 250.0,
+                    height: 230.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(color: Colors.black),
@@ -144,12 +151,14 @@ class Home extends StatelessWidget {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 20.0, 0.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 05.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
-                    height: 250.0,
+                    height: 230.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(color: Colors.black),
@@ -169,7 +178,15 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => CostCalculation(
+                                            index: 1,
+                                          )),
+                                );
+                              },
                               child: Text(
                                 'Price Your Trash',
                                 textAlign: TextAlign.center,
@@ -188,10 +205,11 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 05.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
-                    height: 250.0,
+                    height: 230.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(color: Colors.black),
@@ -211,7 +229,15 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => PickupHistory(
+                                            index: 1,
+                                          )),
+                                );
+                              },
                               child: Text(
                                 'My Pickups History',
                                 textAlign: TextAlign.center,
@@ -264,12 +290,15 @@ class Home extends StatelessWidget {
                             )),
                   );
                   break;
-                // case 1:
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => Notifications(index: 1,)),
-                //   );
-                //   break;
+                case 1:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notifications(
+                              index: 1,
+                            )),
+                  );
+                  break;
                 case 2:
                   Navigator.push(
                     context,

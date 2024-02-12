@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'package:sustain_x/pages/notification.dart';
 
 class Settings extends StatelessWidget {
   const Settings({super.key, required this.index});
@@ -11,7 +12,7 @@ class Settings extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            'Your Profile',
+          'Your Profile',
           style: TextStyle(
             fontSize: 28,
             fontFamily: 'Poppins',
@@ -20,8 +21,9 @@ class Settings extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        padding: const EdgeInsets.fromLTRB(30.0, 20.0, 30.0, 0.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
@@ -31,11 +33,11 @@ class Settings extends StatelessWidget {
                 backgroundColor: Colors.transparent,
               ),
             ),
-            SizedBox(height: 10.0),
+            SizedBox(height: 20.0),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                  'Name',
+                'Name',
                 style: TextStyle(
                   fontSize: 16,
                   fontFamily: 'Poppins',
@@ -43,15 +45,19 @@ class Settings extends StatelessWidget {
               ),
             ),
             Container(
-              width: 370.0,
+              width: double.infinity,
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
-                border: Border.all(color: Colors.green, width: 2,),
+                border: Border.all(
+                  color: Colors.green,
+                  width: 2,
+                ),
               ),
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
                 child: Text(
-                    'Ninad Lunge',
+                  'Ninad Lunge',
                   // textAlign: TextAlign.start,
                   style: TextStyle(
                     fontFamily: 'Poppins',
@@ -70,15 +76,17 @@ class Settings extends StatelessWidget {
               ),
             ),
             Container(
-              width: 370.0,
-              height: 100.0,
+              height: 80.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
-                border: Border.all(color: Colors.green, width: 2,),
+                border: Border.all(
+                  color: Colors.green,
+                  width: 2,
+                ),
               ),
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(18.0),
                   child: Text(
                     'Near Jan Sangram Printing Press, Gond Plot, Ward No.20, Wardha',
                     // textAlign: TextAlign.start,
@@ -100,13 +108,17 @@ class Settings extends StatelessWidget {
               ),
             ),
             Container(
-              width: 370.0,
+              width: double.infinity,
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
-                border: Border.all(color: Colors.green, width: 2,),
+                border: Border.all(
+                  color: Colors.green,
+                  width: 2,
+                ),
               ),
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
                 child: Text(
                   '+91 9405908266',
                   // textAlign: TextAlign.start,
@@ -127,15 +139,19 @@ class Settings extends StatelessWidget {
               ),
             ),
             Container(
-              width: 370.0,
+              width: double.infinity,
               height: 60.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(17.0),
-                border: Border.all(color: Colors.green, width: 2,),
+                border: Border.all(
+                  color: Colors.green,
+                  width: 2,
+                ),
               ),
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
                 child: Text(
-                  'niandlunge@gmail.com',
+                  'ninadlunge@gmail.com',
                   // textAlign: TextAlign.start,
                   style: TextStyle(
                     fontFamily: 'Poppins',
@@ -165,24 +181,33 @@ class Settings extends StatelessWidget {
               ),
             ],
             currentIndex: 2,
-            onTap: (int index){
-              switch (index){
+            onTap: (int index) {
+              switch (index) {
                 case 0:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home(index: 0,)),
+                    MaterialPageRoute(
+                        builder: (context) => Home(
+                              index: 0,
+                            )),
                   );
                   break;
-                // case 1:
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => Notifications(index: 1,)),
-                //   );
-                //   break;
+                case 1:
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Notifications(
+                              index: 1,
+                            )),
+                  );
+                  break;
                 case 2:
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Settings(index: 2,)),
+                    MaterialPageRoute(
+                        builder: (context) => Settings(
+                              index: 2,
+                            )),
                   );
                   break;
               }
