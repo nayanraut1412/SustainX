@@ -270,6 +270,11 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          Navigator.pushNamed(context, '/image_classification');
+        },
+      ),
     );
   }
 }

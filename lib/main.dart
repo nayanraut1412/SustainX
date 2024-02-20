@@ -10,6 +10,10 @@ import 'package:sustain_x/pages/schedule_pickup.dart';
 import 'package:sustain_x/pages/settings.dart';
 import 'package:sustain_x/pages/start.dart';
 import 'package:sustain_x/pages/success_page.dart';
+import 'package:sustain_x/pages/tflite_model.dart';
+import 'package:sustain_x/classifier2.dart';
+
+import 'classifier.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +40,8 @@ class MyApp extends StatelessWidget {
         '/notifications' : (context) => Notifications(),
         '/cost_calculation' : (context) => CostCalculation(),
         '/pickup_history' : (context) => PickupHistory(),
+        // '/image_classification' : (context) => ImageClassificationApp(),
+        '/image_classification' : (context) => BottomNavigationBarExample(),
       },
     );
   }

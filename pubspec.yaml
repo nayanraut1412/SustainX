@@ -38,6 +38,12 @@ dependencies:
 
   #dependencies:
   lottie: ^3.0.0
+  camera: ^0.10.5+2
+  image: ^4.0.17
+  path: ^1.8.3
+  tflite_flutter: ^0.10.4
+#  tflite_flutter_helper: ^0.3.1
+  image_picker: ^1.0.7
 
 dev_dependencies:
   flutter_test:
@@ -76,6 +82,11 @@ flutter:
     - assets/images/
     - assets/animations/
     - assets/price_enquiry/
+    - assets/models/model_image_classification.tflite
+    - assets/models/waste_labels.txt
+    - assets/models/mobilenet_quant.tflite
+    - assets/models/labels.txt
+    - assets/models/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
