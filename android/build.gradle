@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    ext.kotlin_version = '1.9.0'
     repositories {
         google()
         mavenCentral()
@@ -14,11 +14,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {  // Only for snapshot artifacts
-            name 'ossrh-snapshot'
-            url 'https://oss.sonatype.org/content/repositories/snapshots'
-        }
-        mavenLocal()
     }
 }
 
