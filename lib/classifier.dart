@@ -69,7 +69,7 @@ class _BottomNavigationBarExampleState
     return Scaffold(
       appBar: AppBar(
         // title: Image.asset('assets/images/tfl_logo.png'),
-        backgroundColor: Colors.green.withOpacity(0.5),
+        // backgroundColor: Colors.green.withOpacity(0.5),
         title: Text(
           'Classify Your Trash',
           style: TextStyle(
@@ -95,7 +95,7 @@ class _BottomNavigationBarExampleState
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.green,
         onTap: _onItemTapped,
       ),
     );

@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/home' : (context) => Home(),
         '/login' : (context) => Login(),
         '/register' : (context) => Register(),
+        // '/register' : (context) => AuthenticationScreen(),
         '/settings' : (context) => Settings(),
         '/price_enquiry' : (context) => Price_Enquiry(),
         '/schedule_pickup' : (context) => SchedulePickup(),

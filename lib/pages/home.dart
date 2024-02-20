@@ -235,6 +235,29 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  child: OutlinedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/image_classification');
+                    },
+                    child: Text(
+                      'Use Camera to Classify Your Trash',
+                      textAlign: TextAlign.center,
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(color: Colors.green),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(17.0),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),
@@ -280,11 +303,11 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          Navigator.pushNamed(context, '/image_classification');
-        },
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: (){
+      //     Navigator.pushNamed(context, '/image_classification');
+      //   },
+      // ),
     );
   }
 }

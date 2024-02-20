@@ -7,9 +7,9 @@ class SuccessPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(),
+      // appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -94,10 +94,28 @@ class SuccessPage extends StatelessWidget {
                   ),
                 ),
 
-                FloatingActionButton(onPressed: () {
-                  Navigator.of(context).popUntil((route) => route.isFirst);
-                  Navigator.pushNamed(context, '/home');
-                })
+                Padding(
+                  padding: const EdgeInsets.only(top: 700.0),
+                  child: Center(
+                    child: Container(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 5.0),
+                        child: IconButton(
+                            onPressed: () {
+                              Navigator.of(context).popUntil((route) => route.isFirst);
+                              Navigator.pushNamed(context, '/home');
+                            },
+                            icon: Icon(Icons.home, size: 40, color: Colors.black),
+                        ),
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black),
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.green[400],
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ],

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class SchedulePickup extends StatefulWidget {
@@ -14,6 +15,9 @@ class _SchedulePickupState extends State<SchedulePickup> {
   TextEditingController dateController = TextEditingController();
   TextEditingController timeController = TextEditingController();
   TextEditingController locationController = TextEditingController();
+
+  final CollectionReference pickupsCollection =
+    FirebaseFirestore.instance.collection('pickups');
 
   @override
   Widget build(BuildContext context) {
@@ -164,7 +168,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
                             onPrimary: Colors.black,
                             side: const BorderSide(color: Colors.black),
                           ),
-                          onPressed: () {
+                          onPressed: () async {
                             if (selectedDate == null ||
                                 selectedTime == null ||
                                 locationController.text.isEmpty) {
@@ -172,6 +176,9 @@ class _SchedulePickupState extends State<SchedulePickup> {
                                   "Please fill all fields before scheduling pickup.");
                               return;
                             }
+
+                            // Save pickup data to Firestore
+                            await savePickupData();
 
                             // Use selectedDate and selectedTime as needed
                             String pickupDetails = '';
@@ -245,6 +252,19 @@ class _SchedulePickupState extends State<SchedulePickup> {
       //   ),
       // ),
     );
+  }
+
+  Future<void> savePickupData() async {
+    try {
+      await pickupsCollection.add({
+        'date': selectedDate!.toLocal(),
+        'time': selectedTime!.format(context),
+        'location': locationController.text,
+      });
+    } catch (error) {
+      print("Error saving pickup data: $error");
+      // Handle error
+    }
   }
 
   Future<void> _selectDate(BuildContext context) async {

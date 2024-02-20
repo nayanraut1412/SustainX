@@ -3,31 +3,32 @@ import 'package:flutter/material.dart';
 import 'package:sustain_x/components/my_textfield.dart';
 import 'package:sustain_x/components/my_button.dart';
 
+import '../services/auth_service.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
 
-  final emailController  = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   void signUserIn() async {
-    await FirebaseAuth.instance.
-    signInWithEmailAndPassword(
-        email: emailController.text,
-        password: passwordController.text,
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: emailController.text,
+      password: passwordController.text,
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(),
         body: Padding(
-          padding: const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
           child: SingleChildScrollView(
               child: Container(
                   child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Stack(
                 children: [
@@ -158,14 +159,12 @@ class Login extends StatelessWidget {
                 hintText: 'Password',
                 obscureText: true,
               ),
-
+              SizedBox(height: 10),
               //Sign In Button
               MyButton(
                 onTap: signUserIn,
               ),
-
-              const SizedBox(height: 50),
-
+              const SizedBox(height: 25),
               Center(
                 child: Text(
                   'Or continue with',
@@ -188,9 +187,7 @@ class Login extends StatelessWidget {
                       onPrimary: Colors.black, // Text color
                       side: BorderSide(color: Colors.black), // Border color
                     ),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/home');
-                    },
+                    onPressed: () => AuthService().signInWithGoogle(),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -215,7 +212,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 50),
+              const SizedBox(height: 25),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: GestureDetector(
