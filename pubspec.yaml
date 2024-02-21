@@ -43,12 +43,12 @@ dependencies:
   image: ^4.0.17
   path: ^1.8.3
   tflite_flutter: ^0.10.4
-#  tflite_flutter_helper: ^0.3.1
   image_picker: ^1.0.7
   firebase_core: ^2.25.4
   firebase_auth: ^4.17.4
   cloud_firestore: ^4.15.5
   geolocator: ^11.0.0
+  google_maps_flutter: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -89,8 +89,6 @@ flutter:
     - assets/price_enquiry/
     - assets/models/model_image_classification.tflite
     - assets/models/waste_labels.txt
-    - assets/models/mobilenet_quant.tflite
-    - assets/models/labels.txt
     - assets/models/
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -105,10 +103,10 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: Poppins
-       fonts:
-         - asset: fonts/Poppins-Regular.ttf
-         - asset: fonts/Poppins-Medium.ttf
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-Medium.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

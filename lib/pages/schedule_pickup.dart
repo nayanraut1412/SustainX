@@ -1,5 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
+
+import 'current_location_screen.dart';
 
 class SchedulePickup extends StatefulWidget {
   const SchedulePickup({super.key});
@@ -17,7 +20,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
   TextEditingController locationController = TextEditingController();
 
   final CollectionReference pickupsCollection =
-    FirebaseFirestore.instance.collection('pickups');
+  FirebaseFirestore.instance.collection('pickups');
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
             children: [
               Padding(
                 padding:
-                    const EdgeInsets.symmetric(vertical: 00.0, horizontal: 0),
+                const EdgeInsets.symmetric(vertical: 00.0, horizontal: 0),
                 child: Text(
                   'Schedule a Free Pickup',
                   style: TextStyle(
@@ -128,7 +131,35 @@ class _SchedulePickupState extends State<SchedulePickup> {
                         ),
                       ),
                     ),
-                    Image.asset('assets/images/map1.png'),
+                    SizedBox(height: 10.0),
+                    Center(
+                      child: ElevatedButton(
+                        onPressed: () async {
+                          // Navigate to the CurrentLocationScreen
+                          final Position? position = await Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => CurrentLocationScreen()),
+                          );
+
+                          // Handle the returned position
+                          if (position != null) {
+                            // Update locationController with received location data
+                            locationController.text =
+                            'Latitude: ${position.latitude}, Longitude: ${position.longitude}';
+                          }
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 15.0),
+                          child: Text(
+                            'Get Current Location',
+                            style: TextStyle(
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 10.0),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
                       child: Container(
@@ -148,7 +179,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
                               borderRadius: BorderRadius.circular(21),
                               borderSide: const BorderSide(color: Colors.black),
                             ),
-                            labelText: "House No. 10, Street, City",
+                            labelText: "Location",
                             suffixIcon: IconButton(
                               icon: const Icon(Icons.home_work_outlined),
                               onPressed: () {},
@@ -157,11 +188,12 @@ class _SchedulePickupState extends State<SchedulePickup> {
                         ),
                       ),
                     ),
+                    SizedBox(height: 20.0),
                     Container(
                       width: double.infinity,
                       height: 60,
                       child: Padding(
-                        padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0),
+                        padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 0.0),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             primary: Colors.orange[300],
@@ -184,9 +216,9 @@ class _SchedulePickupState extends State<SchedulePickup> {
                             String pickupDetails = '';
                             pickupDetails += 'Date: ${selectedDate!.toLocal()}';
                             pickupDetails +=
-                                '\nTime: ${selectedTime!.format(context)}';
+                            '\nTime: ${selectedTime!.format(context)}';
                             pickupDetails +=
-                                '\nLocation: ${locationController.text}';
+                            '\nLocation: ${locationController.text}';
                             print(pickupDetails);
 
                             Navigator.pushNamed(context, '/success');
@@ -194,7 +226,7 @@ class _SchedulePickupState extends State<SchedulePickup> {
                           child: const Text(
                             'Schedule Pickup',
                             style: TextStyle(
-                              fontSize: 23,
+                              fontSize: 20,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w300,
                             ),
