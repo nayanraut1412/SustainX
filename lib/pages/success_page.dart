@@ -111,7 +111,7 @@ class SuccessPage extends StatelessWidget {
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black),
                         borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.green[400],
+                        color: Colors.green[50],
                       ),
                     ),
                   ),

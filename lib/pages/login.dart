@@ -147,7 +147,7 @@ class Login extends StatelessWidget {
               // Email textfield
               MyTextField(
                 controller: emailController,
-                hintText: 'Username',
+                labelText: 'Username',
                 obscureText: false,
               ),
 
@@ -156,7 +156,7 @@ class Login extends StatelessWidget {
               // password textfield
               MyTextField(
                 controller: passwordController,
-                hintText: 'Password',
+                labelText: 'Password',
                 obscureText: true,
               ),
               SizedBox(height: 10),
