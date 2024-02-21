@@ -10,10 +10,7 @@ import 'package:sustain_x/pages/login.dart';
 import 'package:sustain_x/pages/price_enquiry.dart';
 import 'package:sustain_x/pages/schedule_pickup.dart';
 import 'package:sustain_x/pages/settings.dart';
-import 'package:sustain_x/pages/start.dart';
 import 'package:sustain_x/pages/success_page.dart';
-import 'package:sustain_x/pages/tflite_model.dart';
-import 'package:sustain_x/classifier2.dart';
 
 import 'classifier.dart';
 import 'package:sustain_x/pages/auth_page.dart';

@@ -89,8 +89,6 @@ flutter:
     - assets/price_enquiry/
     - assets/models/model_image_classification.tflite
     - assets/models/waste_labels.txt
-    - assets/models/mobilenet_quant.tflite
-    - assets/models/labels.txt
     - assets/models/
 
   # An image asset can refer to one or more resolution-specific "variants", see
