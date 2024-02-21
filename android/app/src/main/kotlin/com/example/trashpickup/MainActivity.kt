@@ -1,4 +1,4 @@
-package com.example.sustain_x
+package com.example.trashpickup
 
 import io.flutter.embedding.android.FlutterActivity
 

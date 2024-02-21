@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "sustain_x" "\0"
+            VALUE "FileDescription", "trashpickup" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "sustain_x" "\0"
+            VALUE "InternalName", "trashpickup" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "sustain_x.exe" "\0"
-            VALUE "ProductName", "sustain_x" "\0"
+            VALUE "OriginalFilename", "trashpickup.exe" "\0"
+            VALUE "ProductName", "trashpickup" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
