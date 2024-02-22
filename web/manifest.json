@@ -1,6 +1,6 @@
 {
-    "name": "sustain_x",
-    "short_name": "sustain_x",
+    "name": "trashpickup",
+    "short_name": "trashpickup",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
