@@ -33,9 +33,9 @@ There are two applications in the project:
            <td align="center">Home Page</td>
        </tr>
        <tr>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928" width="100"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335" width="100"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c9e890df-30c4-45c7-94ef-7afb1dd7efbf" width="100"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928" width="200"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335" width="200"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c9e890df-30c4-45c7-94ef-7afb1dd7efbf" width="200"></td>
        </tr>
        <tr>
            <td align="center">Schedule Pickup Page</td>
@@ -43,9 +43,9 @@ There are two applications in the project:
            <td align="center">Schedule Success Page</td>
        </tr>
        <tr>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5b67b036-0756-46f5-a068-036c960b9d3e" width="300"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/899b5bfd-ff53-4904-b379-c439c996fcdd" width="300"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/b14e6254-ace1-4945-abaa-91b392ef092d" width="300"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5b67b036-0756-46f5-a068-036c960b9d3e" width="200"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/899b5bfd-ff53-4904-b379-c439c996fcdd" width="200"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/b14e6254-ace1-4945-abaa-91b392ef092d" width="200"></td>
        </tr>
        <tr>
            <td align="center">Price Enquiry Page</td>
@@ -53,9 +53,9 @@ There are two applications in the project:
            <td align="center">Price Your Trash Calculated Example</td>
        </tr>
        <tr>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/08ca18c8-5f21-423b-8ef3-4b91a9b7393d" width="300"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c46bba78-81af-44d3-915e-cb8f4c0ce831" width="300"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/a4582f18-6252-4140-b25a-a0fd8491cdaf" width="300"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/08ca18c8-5f21-423b-8ef3-4b91a9b7393d" width="200"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c46bba78-81af-44d3-915e-cb8f4c0ce831" width="200"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/a4582f18-6252-4140-b25a-a0fd8491cdaf" width="200"></td>
        </tr>
        <tr>
            <td align="center">Pickup History Page</td>
@@ -63,9 +63,9 @@ There are two applications in the project:
            <td align="center">Profile Settings Page</td>
        </tr>
        <tr>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c23da9c3-3134-4ad5-9e9f-0fadfdcc5b29" width="300"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/9e8e533e-7f1a-4272-9f85-4f42398a8515" width="300"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/86f595e1-199d-4125-9880-2de866a965db" width="300"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c23da9c3-3134-4ad5-9e9f-0fadfdcc5b29" width="200"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/9e8e533e-7f1a-4272-9f85-4f42398a8515" width="200"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/86f595e1-199d-4125-9880-2de866a965db" width="200"></td>
        </tr>
        <tr>
            <td align="center">Trash Image Classification Page</td>
@@ -73,16 +73,16 @@ There are two applications in the project:
            <td align="center">Trash Image Classification Example 2 - Live Camera</td>
        </tr>
        <tr>
-            <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/62c0b726-163d-4d89-bb50-7f22f12ccc3a" width="300"></td>
-            <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5fa2f933-b9db-4e90-a2a7-ee0108f00239" width="300"></td>
-            <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5ecedb8f-06d0-4150-adc6-784889a88f78" width="300"></td>
+            <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/62c0b726-163d-4d89-bb50-7f22f12ccc3a" width="200"></td>
+            <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5fa2f933-b9db-4e90-a2a7-ee0108f00239" width="200"></td>
+            <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5ecedb8f-06d0-4150-adc6-784889a88f78" width="200"></td>
        </tr>
        <tr>
            <td align="center">Notifications Page</td>
            <td colspan="2"></td> <!-- Empty cell to maintain grid structure -->
        </tr>
        <tr>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b20e702-8fef-4db2-bd1b-d42667cc1dbe" width="300"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b20e702-8fef-4db2-bd1b-d42667cc1dbe" width="200"></td>
            <td colspan="2"></td> <!-- Empty cell to maintain grid structure -->
        </tr>
    </table>
