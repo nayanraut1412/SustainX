@@ -1,3 +1,6 @@
+To reduce each image to 25% of its original size and organize them in a 3xN grid in the GitHub Readme file, you can use the following Markdown code:
+
+```markdown
 # SustainX
 ## We Turn Your Trash into Cash!
 
@@ -28,45 +31,44 @@ There are two applications in the project:
 ## Snapshots of the Application:
 1. User Side Application:
    a. Login Page:
-   ![Screenshot_2024-02-22-21-58-40-953_com example sustain_x | width=25](https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928)
-   
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928" width="25%">
+
    b. Register Page:
-   ![Screenshot_2024-02-22-21-58-43-299_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335" width="25%">
 
    c. Home Page:
-   ![Screenshot_2024-02-22-21-52-03-690_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/c9e890df-30c4-45c7-94ef-7afb1dd7efbf)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c9e890df-30c4-45c7-94ef-7afb1dd7efbf" width="25%">
 
    d. Schedule Pickup Page:
-   ![Screenshot_2024-02-22-21-53-16-790_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/5b67b036-0756-46f5-a068-036c960b9d3e)
-   ![Screenshot_2024-02-22-21-52-31-774_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/7038a0bb-0878-4bf2-828e-0c1bf29f6fb3)
-   ![Screenshot_2024-02-22-21-56-11-232_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/146f64b7-7e6a-4f71-bfe4-229332a87a8a)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5b67b036-0756-46f5-a068-036c960b9d3e" width="25%">
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/7038a0bb-0878-4bf2-828e-0c1bf29f6fb3" width="25%">
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/146f64b7-7e6a-4f71-bfe4-229332a87a8a" width="25%">
 
    e. Price Enquiry Page:
-   ![Screenshot_2024-02-22-21-56-18-797_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/08ca18c8-5f21-423b-8ef3-4b91a9b7393d)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/08ca18c8-5f21-423b-8ef3-4b91a9b7393d" width="25%">
 
    f. Price Your Trash Page:
-   ![Screenshot_2024-02-22-21-56-25-543_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/c46bba78-81af-44d3-915e-cb8f4c0ce831)
-   ![Screenshot_2024-02-22-21-56-35-446_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/6e6c21e0-f2a3-448f-aae5-ed7ac362740f)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c46bba78-81af-44d3-915e-cb8f4c0ce831" width="25%">
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/6e6c21e0-f2a3-448f-aae5-ed7ac362740f" width="25%">
 
    g. Pickup History:
-   ![Screenshot_2024-02-22-21-56-40-038_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/c23da9c3-3134-4ad5-9e9f-0fadfdcc5b29)
-   ![Screenshot_2024-02-22-21-56-43-456_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/ef755472-4ad8-49d6-a24e-5ede527c06ee)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c23da9c3-3134-4ad5-9e9f-0fadfdcc5b29" width="25%">
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ef755472-4ad8-49d6-a24e-5ede527c06ee" width="25%">
 
    h. Trash Image Classification Page:
-   ![Screenshot_2024-02-22-21-57-10-139_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/62c0b726-163d-4d89-bb50-7f22f12ccc3a)
-   ![Screenshot_2024-02-22-21-57-30-060_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/ac40ae2f-abdb-4656-a70f-d6ee7cb0ddf3)
-   ![Screenshot_2024-02-22-21-58-14-145_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/ce4cdd15-93c4-4381-9011-8c68b8c03bb3)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/62c0b726-163d-4d89-bb50-7f22f12ccc3a" width="25%">
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ac40ae2f-abdb-4656-a70f-d6ee7cb0ddf3" width="25%">
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ce4cdd15-93c4-4381-9011-8c68b8c03bb3" width="25%">
 
    i. Profile Settings Page:
-   ![Screenshot_2024-02-22-21-52-06-657_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/86f595e1-199d-4125-9880-2de866a965db)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/86f595e1-199d-4125-9880-2de866a965db" width="25%">
 
    j. Notifications Page:
-   ![Screenshot_2024-02-22-21-52-10-034_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b20e702-8fef-4db2-bd1b-d42667cc1dbe)
+   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b20e702-8fef-4db2-bd1b-d42667cc1dbe" width="25%">
 
 2. Trash Collector Side Application:
 
 ## Technologies Used:
 1. Flutter (for Application Developement).
 2. Google Maps API (for getting User Location).
-3. Google Cloud Console (for managing the Cloud Resources and API Integration).
-4. Firebase (for User Authentication and Data Storage).
+3. Google Cloud Console (for managing
