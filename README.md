@@ -1,6 +1,3 @@
-To reduce each image to 25% of its original size and organize them in a 3xN grid in the GitHub Readme file, you can use the following Markdown code:
-
-```markdown
 # SustainX
 ## We Turn Your Trash into Cash!
 
