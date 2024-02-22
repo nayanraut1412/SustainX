@@ -76,7 +76,7 @@ There are two applications in the project:
             <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/62c0b726-163d-4d89-bb50-7f22f12ccc3a" width="200"></td>
             <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5fa2f933-b9db-4e90-a2a7-ee0108f00239" width="200"></td>
             <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5ecedb8f-06d0-4150-adc6-784889a88f78" width="200"></td>
-       </tr>
+<!--        </tr>
        <tr>
            <td align="center">Notifications Page</td>
            <td colspan="2"></td> <!-- Empty cell to maintain grid structure -->
@@ -84,7 +84,7 @@ There are two applications in the project:
        <tr>
            <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b20e702-8fef-4db2-bd1b-d42667cc1dbe" width="200"></td>
            <td colspan="2"></td> <!-- Empty cell to maintain grid structure -->
-       </tr>
+       </tr> -->
    </table>
 
 3. Trash Collector Side Application:
