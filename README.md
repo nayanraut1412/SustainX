@@ -8,14 +8,22 @@ The Global Economy is now only 7.2% circular leaving a huge Circularity Gap for 
 
 The real concern regarding the environment wellbeing and how it affects the overall wellbeing of everyone related to the environment was ultimate inspiration. Japan's town, Kamikatsu, with a population of 1344 people, is a waste free city with ‘Zero Waste Declaration’ all by the collaborative help of the people living there. Replacing the take-make-dispose model with a make-use-return model to transform into a circular economy is the ultimate game changer in saving the environment. The TEDx Talk of Cillian Lohan on Circular Economy also gave a sense of inspiration and idea for the same.
 
+## Project Structure:
+There are two applications in the project:
+1. User Side Application
+2. Trash Collector Side Application
+
 ## Application Features:
 1. The user of the application is able to register and login onto the application using two methods - Email and Google Authentication.
-2. The home screen of the application has 5 features:
+2. The User Side Application Home Screen has 5 features:
    a. Schedule Pickup - Let's User schedule trash collection service.
    b. Price Enquiry - Let's User to know the current market price for Trash Categories in INR/KG.
    c. Price Your Trash - Let's User calculate the price of their trash.
    d. My Pickups History - Let's User view their Pickups History
    e. Image Classify your Trash - Let's User Classify their Trash by using Image Recognition Model integrated in the application.
+3. The Trash Collector Side Application Home Screen has 2 features:
+   a. Completed Pickups - Let's Trash Collector know about the number of Completed Pickups and redirects them to a more detailed view about completed pickups.
+   b. Pending Pickups - Let's Trash Collector know about the pending scheduled pickups for the day and redirects them to a list view of the pending pick ups with location of pickups which can be viewed on Google Maps.
 
 ## Snapshots of the Application:
 
