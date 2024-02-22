@@ -27,41 +27,24 @@ There are two applications in the project:
 
 ## Snapshots of the Application:
 1. User Side Application:
-   a. Login Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928" width="25%">
+a. Login Page: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928" width="25">
+b. Register Page: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335" width="25">
+c. Home Page: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c9e890df-30c4-45c7-94ef-7afb1dd7efbf" width="25">
 
-   b. Register Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335" width="25%">
+d. Schedule Pickup Page:
+<img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5b67b036-0756-46f5-a068-036c960b9d3e" width="25"> <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/7038a0bb-0878-4bf2-828e-0c1bf29f6fb3" width="25"> <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/146f64b7-7e6a-4f71-bfe4-229332a87a8a" width="25">
 
-   c. Home Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c9e890df-30c4-45c7-94ef-7afb1dd7efbf" width="25%">
+e. Price Enquiry Page: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/08ca18c8-5f21-423b-8ef3-4b91a9b7393d" width="25">
 
-   d. Schedule Pickup Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5b67b036-0756-46f5-a068-036c960b9d3e" width="25%">
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/7038a0bb-0878-4bf2-828e-0c1bf29f6fb3" width="25%">
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/146f64b7-7e6a-4f71-bfe4-229332a87a8a" width="25%">
+f. Price Your Trash Page: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c46bba78-81af-44d3-915e-cb8f4c0ce831" width="25"> <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/6e6c21e0-f2a3-448f-aae5-ed7ac362740f" width="25">
 
-   e. Price Enquiry Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/08ca18c8-5f21-423b-8ef3-4b91a9b7393d" width="25%">
+g. Pickup History: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c23da9c3-3134-4ad5-9e9f-0fadfdcc5b29" width="25"> <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ef755472-4ad8-49d6-a24e-5ede527c06ee" width="25">
 
-   f. Price Your Trash Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c46bba78-81af-44d3-915e-cb8f4c0ce831" width="25%">
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/6e6c21e0-f2a3-448f-aae5-ed7ac362740f" width="25%">
+h. Trash Image Classification Page: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/62c0b726-163d-4d89-bb50-7f22f12ccc3a" width="25"> <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ac40ae2f-abdb-4656-a70f-d6ee7cb0ddf3" width="25"> <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ce4cdd15-93c4-4381-9011-8c68b8c03bb3" width="25">
 
-   g. Pickup History:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c23da9c3-3134-4ad5-9e9f-0fadfdcc5b29" width="25%">
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ef755472-4ad8-49d6-a24e-5ede527c06ee" width="25%">
+i. Profile Settings Page: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/86f595e1-199d-4125-9880-2de866a965db" width="25">
 
-   h. Trash Image Classification Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/62c0b726-163d-4d89-bb50-7f22f12ccc3a" width="25%">
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ac40ae2f-abdb-4656-a70f-d6ee7cb0ddf3" width="25%">
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/ce4cdd15-93c4-4381-9011-8c68b8c03bb3" width="25%">
-
-   i. Profile Settings Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/86f595e1-199d-4125-9880-2de866a965db" width="25%">
-
-   j. Notifications Page:
-   <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b20e702-8fef-4db2-bd1b-d42667cc1dbe" width="25%">
+j. Notifications Page: <img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b20e702-8fef-4db2-bd1b-d42667cc1dbe" width="25">
 
 2. Trash Collector Side Application:
 
