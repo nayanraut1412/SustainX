@@ -33,9 +33,9 @@ There are two applications in the project:
            <td align="center">Home Page</td>
        </tr>
        <tr>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928" width="300"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335" width="300"></td>
-           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c9e890df-30c4-45c7-94ef-7afb1dd7efbf" width="300"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928" width="100"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335" width="100"></td>
+           <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/c9e890df-30c4-45c7-94ef-7afb1dd7efbf" width="100"></td>
        </tr>
        <tr>
            <td align="center">Schedule Pickup Page</td>
