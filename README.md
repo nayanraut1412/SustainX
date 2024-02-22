@@ -28,9 +28,9 @@ There are two applications in the project:
 1. User Side Application:
    <table>
        <colgroup>
-           <col style="width: 33.33%;">
-           <col style="width: 33.33%;">
-           <col style="width: 33.33%;">
+           <col style="width: 33.33;">
+           <col style="width: 33.33;">
+           <col style="width: 33.33;">
        </colgroup>
        <tr>
            <td align="center">Login Page</td>
