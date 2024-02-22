@@ -28,7 +28,7 @@ There are two applications in the project:
 ## Snapshots of the Application:
 1. User Side Application:
    a. Login Page:
-   ![Screenshot_2024-02-22-21-58-40-953_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928)
+   ![Screenshot_2024-02-22-21-58-40-953_com example sustain_x | width=25](https://github.com/Ninad-Lunge/SustainX/assets/96621805/4b226386-5dfa-4409-abb1-41321a788928)
    
    b. Register Page:
    ![Screenshot_2024-02-22-21-58-43-299_com example sustain_x](https://github.com/Ninad-Lunge/SustainX/assets/96621805/f0a63dab-fd3f-46d2-bbd1-c52e74dee335)
