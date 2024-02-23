@@ -114,7 +114,7 @@ There are two applications in the project:
       <tr>
          <td align="center">Pending Pickup Screen</td>
          <td align="center">Notifications Screen</td>
-         <td align="center">Register Screen</td>
+         <td align="center">Profile Screen</td>
       </tr>
       <tr>
          <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/299abe9f-8ab4-48c9-a32a-a2a3e37c59f4" width="250"></td>
