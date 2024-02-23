@@ -87,11 +87,46 @@ There are two applications in the project:
        </tr> -->
    </table>
 
-3. Trash Collector Side Application:
+2. Trash Collector Side Application:
+   <table>
+      <tr>
+         <td align="center">Start Screen</td>
+         <td align="center">Login Screen</td>
+         <td align="center">Register Screen</td>
+      </tr>
+      <tr>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/4444cb66-67bf-43a3-93ba-de477a3f68a5" width="250"></td>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/cc0f79ea-b625-4e51-92f4-24291fd4c3ec" width="250"></td>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/f9a99b8d-8c94-4ade-8be4-d2e8675aa730" width="250"></td>
+      </tr>
+
+      <tr>
+         <td align="center">Home Screen</td>
+         <td align="center">Completed Pickup Screen</td>
+         <td align="center">Item Details Page</td>
+      </tr>
+      <tr>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/9e985d68-4f3d-44e8-8402-5e43f2958e4b" width="250"></td>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/7792ca8a-7ae2-4034-823b-ae51ba92931d" width="250"></td>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/5d36eafb-c63f-440a-b248-b4a28a5bcd5a" width="250"></td>
+      </tr>
+      
+      <tr>
+         <td align="center">Pending Pickup Screen</td>
+         <td align="center">Notifications Screen</td>
+         <td align="center">Register Screen</td>
+      </tr>
+      <tr>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/299abe9f-8ab4-48c9-a32a-a2a3e37c59f4" width="250"></td>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/8b98435a-d42f-4c17-813b-f71e4731809b" width="250"></td>
+         <td align="center"><img src="https://github.com/Ninad-Lunge/SustainX/assets/96621805/94b9c4b8-5589-4e19-bc74-96f5566a9fd7" width="250"></td>
+      </tr>
+   </table>
 
 ## Technologies Used:
 1. Flutter (for Application Development).
 2. Google Maps API (for getting User Location).
 3. Google Cloud Console (for managing the Cloud Resources and API Integration).
+4. Python (for Machine Learning - Image Classification of Waste).
 
 ## Usage and Installation Guide:
