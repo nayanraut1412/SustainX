@@ -131,6 +131,8 @@ There are two applications in the project:
 
 ## Usage and Installation Guide:
 
+Select either one of the following two options:
+
 A. Download the APKs:
    1. [Download the Latest Version of User App](https://github.com/Ninad-Lunge/SustainX/releases/download/SustainX_V1/SustainX.apk)
    2. [Download the Latest Version of Trash Collector App](https://github.com/Ninad-Lunge/SustainX/releases/download/TrashCollector_V1/TrashCollector.apk)
