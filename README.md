@@ -130,3 +130,12 @@ There are two applications in the project:
 4. Python (for Machine Learning - Image Classification of Waste).
 
 ## Usage and Installation Guide:
+
+A. Download the APKs:
+   1. [Download the Latest Version of User Android App](https://github.com/Ninad-Lunge/SustainX/releases/download/SustainX_V1/SustainX.apk)
+   2. [Download the Latest Version of Trash Collector Android App](https://github.com/Ninad-Lunge/SustainX/releases/download/TrashCollector_V1/TrashCollector.apk)
+
+B. Setup the Flutter Project:
+Note: Does not contain GMap API Keys, So the Get Location will not work.
+   1. The 'master' branch of the GitHub Repository has the User Side Application Code.
+   2. The 'trash_collector_side_app' branch of the GitHub Repository has the Trash Collector Side Application Code.
