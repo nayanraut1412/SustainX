@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:sustain_x/pages/settings.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Home extends StatelessWidget {
-  const Home({Key? key, required this.index}) : super(key: key);
+  Home({super.key});
 
-  final int index;
+  final user = FirebaseAuth.instance.currentUser!;
+
+  void signUserOut() {
+    FirebaseAuth.instance.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
+        actions: [IconButton(onPressed: signUserOut, icon: Icon(Icons.logout))],
+
         title: const Padding(
           padding: EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 10.0),
           child: Text(
@@ -23,14 +30,15 @@ class Home extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0.0),
+        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
+              padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 05.0),
               child: Text(
-                  'Choose a Service',
+                'Choose a Service',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0,
@@ -38,12 +46,14 @@ class Home extends StatelessWidget {
               ),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 20.0, 20.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 05.0, vertical: 05.0),
                   child: Container(
                     width: 150.0,
-                    height: 250.0,
+                    height: 230.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(color: Colors.black),
@@ -53,7 +63,8 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/truck.png'),
                           ),
                         ),
@@ -62,11 +73,13 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                                onPressed: () {},
-                                child: Text(
-                                    'Schedule a Free Pickup',
-                                  textAlign: TextAlign.center,
-                                ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/schedule_pickup');
+                              },
+                              child: Text(
+                                'Schedule a Free Pickup',
+                                textAlign: TextAlign.center,
+                              ),
                               style: OutlinedButton.styleFrom(
                                 side: BorderSide(color: Colors.green),
                                 shape: RoundedRectangleBorder(
@@ -81,10 +94,11 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 20.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 05.0, vertical: 05.0),
                   child: Container(
                     width: 150.0,
-                    height: 250.0,
+                    height: 230.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(color: Colors.black),
@@ -94,7 +108,8 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/rupee.png'),
                           ),
                         ),
@@ -103,9 +118,11 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/price_enquiry');
+                              },
                               child: Text(
-                                  'Price Enquiry',
+                                'Price Enquiry',
                                 textAlign: TextAlign.center,
                               ),
                               style: OutlinedButton.styleFrom(
@@ -124,12 +141,14 @@ class Home extends StatelessWidget {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 20.0, 0.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 05.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
-                    height: 250.0,
+                    height: 230.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(color: Colors.black),
@@ -139,7 +158,8 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/calculate.png'),
                           ),
                         ),
@@ -148,9 +168,11 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/cost_calculation');
+                              },
                               child: Text(
-                                  'Price Your Trash',
+                                'Price Your Trash',
                                 textAlign: TextAlign.center,
                               ),
                               style: OutlinedButton.styleFrom(
@@ -167,10 +189,11 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 05.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
-                    height: 250.0,
+                    height: 230.0,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(17.0),
                       border: Border.all(color: Colors.black),
@@ -180,7 +203,8 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/order.png'),
                           ),
                         ),
@@ -189,9 +213,11 @@ class Home extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/pickup_history');
+                              },
                               child: Text(
-                                  'My Pickups History',
+                                'My Pickups History',
                                 textAlign: TextAlign.center,
                               ),
                               style: OutlinedButton.styleFrom(
@@ -207,6 +233,29 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 ),
+              ],
+            ),
+            SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  child: OutlinedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/image_classification');
+                    },
+                    child: Text(
+                      'Use Camera to Classify Your Trash',
+                      textAlign: TextAlign.center,
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(color: Colors.green),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(17.0),
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ],
@@ -231,28 +280,19 @@ class Home extends StatelessWidget {
               ),
             ],
             currentIndex: 0,
-            onTap: (int index){
-              switch (index){
+            onTap: (int index) {
+              switch (index) {
                 case 0:
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Home(index: 0,)),
-                  );
+                  Navigator.pushNamed(context, '/home');
                   break;
-                // case 1:
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => Notifications(index: 1,)),
-                //   );
-                //   break;
+                case 1:
+                  Navigator.pushNamed(context, '/notifications');
+                  break;
                 case 2:
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Settings(index: 2,)),
-                  );
+                  Navigator.pushNamed(context, '/settings');
                   break;
               }
-          },
+            },
             elevation: 0.0,
             backgroundColor: Colors.transparent,
             selectedItemColor: Colors.green,
@@ -263,6 +303,11 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: (){
+      //     Navigator.pushNamed(context, '/image_classification');
+      //   },
+      // ),
     );
   }
 }
