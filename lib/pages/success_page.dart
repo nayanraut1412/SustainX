@@ -18,7 +18,7 @@ class SuccessPage extends StatelessWidget {
               children: [
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
+                    padding: const EdgeInsets.fromLTRB(0.0, 80.0, 0.0, 0.0),
                     child: Text(
                       'Pickup Scheduled',
                       style: TextStyle(
@@ -36,7 +36,7 @@ class SuccessPage extends StatelessWidget {
                 // Foreground text
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0.0, 100.0, 0.0, 0.0),
+                    padding: const EdgeInsets.fromLTRB(0.0, 80.0, 0.0, 0.0),
                     child: Text(
                       'Pickup Scheduled',
                       style: TextStyle(
@@ -51,7 +51,7 @@ class SuccessPage extends StatelessWidget {
 
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0.0, 150.0, 0.0, 0.0),
+                    padding: const EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
                     child: Text(
                       'Successfully!',
                       style: TextStyle(
@@ -69,7 +69,7 @@ class SuccessPage extends StatelessWidget {
                 // Foreground text
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(0.0, 150.0, 0.0, 0.0),
+                    padding: const EdgeInsets.fromLTRB(0.0, 120.0, 0.0, 0.0),
                     child: Text(
                       'Successfully!',
                       style: TextStyle(
@@ -95,7 +95,7 @@ class SuccessPage extends StatelessWidget {
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(top: 700.0),
+                  padding: const EdgeInsets.only(top: 650.0),
                   child: Center(
                     child: Container(
                       child: Padding(

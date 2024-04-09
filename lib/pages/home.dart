@@ -17,10 +17,10 @@ class Home extends StatelessWidget {
 
         actions: [IconButton(onPressed: signUserOut, icon: Icon(Icons.logout))],
 
-        title: const Padding(
+        title: Padding(
           padding: EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 10.0),
           child: Text(
-            'Hello, Ninad!',
+            'Hello, ${user.displayName ?? 'User'}!',
             style: TextStyle(
               fontSize: 28,
               fontFamily: 'Poppins',
@@ -49,8 +49,7 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 05.0, vertical: 05.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
                     height: 230.0,
@@ -63,8 +62,7 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/truck.png'),
                           ),
                         ),
@@ -94,8 +92,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 05.0, vertical: 05.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
                     height: 230.0,
@@ -108,8 +105,7 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/rupee.png'),
                           ),
                         ),
@@ -144,8 +140,7 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 05.0, vertical: 5.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 05.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
                     height: 230.0,
@@ -158,8 +153,7 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/calculate.png'),
                           ),
                         ),
@@ -303,11 +297,6 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: (){
-      //     Navigator.pushNamed(context, '/image_classification');
-      //   },
-      // ),
     );
   }
 }
