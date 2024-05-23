@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'bottom_navigation_bar.dart';
 
 class CostCalculation extends StatefulWidget {
   const CostCalculation({super.key});
@@ -17,10 +16,8 @@ class Item {
 }
 
 class _CostCalculationState extends State<CostCalculation> {
-  List<Item> selectedItems = []; // List to keep track of selected items
-  double totalCost = 0.0; // Total cost variable
-
-  // int _selectedIndex = 0;
+  List<Item> selectedItems = [];
+  double totalCost = 0.0;
 
   @override
   Widget build(BuildContext context) {
@@ -188,34 +185,10 @@ class _CostCalculationState extends State<CostCalculation> {
           ),
         ),
       ),
-      // bottomNavigationBar: CustomBottomNavigationBar(
-      //   currentIndex: _selectedIndex,
-      //   onTap: (index) {
-      //     setState(() {
-      //       _selectedIndex = index;
-      //     });
-      //
-      //     switch (index) {
-      //       case 0:
-      //         Navigator.of(context).popUntil((route) => route.isFirst);
-      //         Navigator.pushNamed(context, '/home');
-      //         break;
-      //       case 1:
-      //         Navigator.of(context).popUntil((route) => route.isFirst);
-      //         Navigator.pushNamed(context, '/notifications');
-      //         break;
-      //       case 2:
-      //         Navigator.of(context).popUntil((route) => route.isFirst);
-      //         Navigator.pushNamed(context, '/settings');
-      //         break;
-      //     }
-      //   },
-      // ),
     );
   }
 
   double getCostPerKG(String itemName) {
-    // Function to get cost per KG based on the item name
     switch (itemName) {
       case 'Newspapers':
         return 15.0;

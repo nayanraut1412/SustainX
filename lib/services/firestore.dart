@@ -8,11 +8,15 @@ class FirestoreService {
   FirebaseFirestore.instance.collection('users');
 
   Future<void> addPickup(DateTime time, DateTime date, String address) {
+    String isoTimeString = time.toIso8601String();
+    String isoDateString = date.toIso8601String();
+
     return pickups.add({
-      'date': date,
-      'time': time,
+      'date': isoDateString,
+      'time': isoTimeString,
       'address': address,
-      'timestamp': Timestamp.now(),
+      'timestamp': FieldValue.serverTimestamp(),
+      'status': "Pending",
     });
   }
 

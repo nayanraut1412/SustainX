@@ -41,7 +41,6 @@ class MyApp extends StatelessWidget {
         '/notifications' : (context) => Notifications(),
         '/cost_calculation' : (context) => CostCalculation(),
         '/pickup_history' : (context) => PickupHistory(),
-        // '/image_classification' : (context) => ImageClassificationApp(),
         '/image_classification' : (context) => BottomNavigationBarExample(),
         '/auth_page' : (context) => AuthPage(),
       },
