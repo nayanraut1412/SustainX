@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -10,22 +11,59 @@ class Home extends StatelessWidget {
     FirebaseAuth.instance.signOut();
   }
 
+  Future<String> getUserName() async {
+    final email = user.email; // Get the email of the current user
+    final querySnapshot = await FirebaseFirestore.instance
+        .collection('users')
+        .where('email', isEqualTo: email)
+        .get();
+
+    // if (querySnapshot.docs.isNotEmpty) {
+    //   // If a document with matching email is found
+    //   final userData = querySnapshot.docs.first.data();
+    //   final fullName = userData['full name']; // Assuming 'fullName' is the field containing the full name
+    //   return fullName.toString();
+    // } else {
+      return 'User'; // Return a default value if user not found or fullName is not available
+    // }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         actions: [IconButton(onPressed: signUserOut, icon: Icon(Icons.logout))],
-
-        title: const Padding(
+        title: Padding(
           padding: EdgeInsets.fromLTRB(15.0, 10.0, 0.0, 10.0),
-          child: Text(
-            'Hello, Ninad!',
-            style: TextStyle(
-              fontSize: 28,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w400,
-            ),
+          child: FutureBuilder(
+            future: getUserName(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                // While waiting for the future to complete, show a loading indicator or placeholder
+                return CircularProgressIndicator(); // Placeholder example
+              } else {
+                // Once the future is complete, show the 'Hello' text with the user's full name
+                if (snapshot.hasError) {
+                  return Text(
+                    'Hello, User',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400,
+                    ),
+                  );
+                } else {
+                  return Text(
+                    'Hello, ${snapshot.data ?? 'User'}',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400,
+                    ),
+                  );
+                }
+              }
+            },
           ),
         ),
       ),
@@ -49,8 +87,7 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 05.0, vertical: 05.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
                     height: 230.0,
@@ -63,8 +100,7 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/truck.png'),
                           ),
                         ),
@@ -94,8 +130,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 05.0, vertical: 05.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
                     height: 230.0,
@@ -108,8 +143,7 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/rupee.png'),
                           ),
                         ),
@@ -144,8 +178,7 @@ class Home extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 05.0, vertical: 5.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 05.0, vertical: 5.0),
                   child: Container(
                     width: 150.0,
                     height: 230.0,
@@ -158,8 +191,7 @@ class Home extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 4.0, horizontal: 20.0),
+                            padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 20.0),
                             child: Image.asset('assets/images/calculate.png'),
                           ),
                         ),
@@ -303,11 +335,6 @@ class Home extends StatelessWidget {
           ),
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: (){
-      //     Navigator.pushNamed(context, '/image_classification');
-      //   },
-      // ),
     );
   }
 }

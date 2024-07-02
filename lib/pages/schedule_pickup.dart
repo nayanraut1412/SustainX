@@ -18,6 +18,8 @@ class _SchedulePickupState extends State<SchedulePickup> {
   TextEditingController dateController = TextEditingController();
   TextEditingController timeController = TextEditingController();
   TextEditingController locationController = TextEditingController();
+  TextEditingController latitudeController = TextEditingController();
+  TextEditingController longitudeController = TextEditingController();
 
   final CollectionReference pickupsCollection =
   FirebaseFirestore.instance.collection('pickups');
@@ -143,9 +145,10 @@ class _SchedulePickupState extends State<SchedulePickup> {
 
                           // Handle the returned position
                           if (position != null) {
-                            // Update locationController with received location data
                             locationController.text =
                             'Latitude: ${position.latitude}, Longitude: ${position.longitude}';
+                            latitudeController.text = '${position.latitude}';
+                            longitudeController.text = '${position.longitude}';
                           }
                         },
                         child: Padding(
@@ -250,10 +253,12 @@ class _SchedulePickupState extends State<SchedulePickup> {
         'date': selectedDate!.toLocal(),
         'time': selectedTime!.format(context),
         'location': locationController.text,
+        'latitude': latitudeController.text,
+        'longitude': longitudeController.text,
+        'status' : 'Pending',
       });
     } catch (error) {
       print("Error saving pickup data: $error");
-      // Handle error
     }
   }
 

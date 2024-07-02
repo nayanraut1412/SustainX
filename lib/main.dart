@@ -4,16 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:sustain_x/pages/cost_calculation.dart';
 import 'package:sustain_x/pages/notification.dart';
 import 'package:sustain_x/pages/pickup_history.dart';
-import 'package:sustain_x/pages/register.dart';
 import 'package:sustain_x/pages/home.dart';
-import 'package:sustain_x/pages/login.dart';
 import 'package:sustain_x/pages/price_enquiry.dart';
 import 'package:sustain_x/pages/schedule_pickup.dart';
 import 'package:sustain_x/pages/settings.dart';
 import 'package:sustain_x/pages/success_page.dart';
 
 import 'classifier.dart';
-import 'package:sustain_x/pages/auth_page.dart';
+import 'package:sustain_x/pages/user_auth_pages/auth_page.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,9 +34,6 @@ class MyApp extends StatelessWidget {
       routes: {
         // '/' : (context) => Start(),
         '/home' : (context) => Home(),
-        '/login' : (context) => Login(),
-        '/register' : (context) => Register(),
-        // '/register' : (context) => AuthenticationScreen(),
         '/settings' : (context) => Settings(),
         '/price_enquiry' : (context) => Price_Enquiry(),
         '/schedule_pickup' : (context) => SchedulePickup(),
@@ -46,7 +41,6 @@ class MyApp extends StatelessWidget {
         '/notifications' : (context) => Notifications(),
         '/cost_calculation' : (context) => CostCalculation(),
         '/pickup_history' : (context) => PickupHistory(),
-        // '/image_classification' : (context) => ImageClassificationApp(),
         '/image_classification' : (context) => BottomNavigationBarExample(),
         '/auth_page' : (context) => AuthPage(),
       },
