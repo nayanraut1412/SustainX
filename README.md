@@ -11,6 +11,7 @@ The real concern regarding the environment and its overall wellbeing was the ult
 There are two applications in the project:
 1. User Side Application
 2. Trash Collector Side Application
+3. [Recyclers](https://github.com/nayanraut1412/Recyclers)
 
 ## Application Features:
 1. The user of the application can register and log in to the application using two methods - Email and Google Authentication.
